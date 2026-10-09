@@ -860,3 +860,11 @@ html.shot .phone{border-radius:0}
   ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}
 }
 .panel .brand .appic{flex:none}
+
+/* Judge-mode banner (shown only when judge mode is on) */
+.jbanner{display:none;position:absolute;left:0;right:0;bottom:calc(var(--disc-h) + env(safe-area-inset-bottom,0px));height:32px;align-items:center;justify-content:center;gap:10px;padding:0 12px;background:#FFF4D6;color:#4A3300;font-size:11.5px;font-weight:500;z-index:44;border-top:1px solid #F0D27F}
+.jbanner b{font-weight:700}
+.jbanner button{font:inherit;font-weight:700;color:#fff;background:#8800EC;border:0;border-radius:999px;padding:5px 12px;min-height:24px;cursor:pointer}
+.jbanner button:focus-visible{outline:2px solid #034793;outline-offset:2px}
+html.judge .jbanner{display:flex}
+html.judge #screen{bottom:calc(var(--disc-h) + 32px + env(safe-area-inset-bottom,0px))}
