@@ -8,6 +8,7 @@
 <meta name="theme-color" content="#5132AD">
 <meta name="htmx-config" content='{"historyEnabled":false,"defaultSwapStyle":"innerHTML","globalViewTransitions":false}'>
 <link rel="preload" href="assets/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/app.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%238800EC'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='12' fill='white' text-anchor='middle'%3Eneu%3C/text%3E%3C/svg%3E">
@@ -32,6 +33,9 @@
       <span class="sw js-judge-sw"></span>
     </div>
 
+    <h4>On this screen</h4>
+    <div class="notes js-notes">—</div>
+
     <h4>Screens</h4>
     <ul class="slist js-slist">
       <li><a hx-get="screens/home.html" data-s="home"><span class="n">1</span>Home + Squad Goals module</a></li>
@@ -44,9 +48,17 @@
       <li><a hx-get="screens/unlock.html" data-s="unlock"><span class="n">8</span>100% unlocked → checkout</a></li>
       <li><a hx-get="screens/widget.html" data-s="widget"><span class="n">9</span>Home-screen widget</a></li>
     </ul>
-
-    <h4>On this screen</h4>
-    <div class="notes js-notes">—</div>
+    <h4 class="more">More flows</h4>
+    <ul class="slist js-slist">
+      <li><a hx-get="screens/invite.html" data-s="invite"><span class="n">10</span>Invite (Riya, not on Neu)</a></li>
+      <li><a hx-get="screens/streak.html" data-s="streak"><span class="n">11</span>Streak &amp; freeze</a></li>
+      <li><a hx-get="screens/pay_failed.html" data-s="pay_failed"><span class="n">12</span>Payment failed</a></li>
+      <li><a hx-get="screens/onboarding.html" data-s="onboarding"><span class="n">13</span>First run (activation)</a></li>
+      <li><a hx-get="screens/settings.html" data-s="settings"><span class="n">14</span>Settings, pause, opt-out</a></li>
+      <li><a hx-get="screens/rules.html" data-s="rules"><span class="n">15</span>How it works (rules)</a></li>
+      <li><a data-act="vpn" data-s="vpn"><span class="n">16</span>VPN soft notice (on Home)</a></li>
+    </ul>
+    <p class="kbd">Keys: <kbd>←</kbd> <kbd>→</kbd> step screens · <kbd>J</kbd> judge mode</p>
 
     <h4>Hook stages</h4>
     <div class="klegend">
@@ -68,14 +80,14 @@
         </span>
       </div>
 
-      <main id="screen" aria-live="polite"></main>
+      <main id="screen"></main>
 
       <div class="disc"><span>Prototype by <b>Creat0rs, IIM Lucknow</b> · not affiliated with Tata Digital</span></div>
       <div class="toast js-toast" role="status"></div>
 
       <!-- mobile: floating Judge button + screen menu -->
-      <button class="jfab js-jfab" data-act="jmenu" aria-label="Judge mode and screens">JM</button>
-      <div class="jmenu js-jmenu">
+      <button class="jfab js-jfab" data-act="jmenu" aria-label="Judge mode and screens" aria-expanded="false" aria-controls="jmenu">JM</button>
+      <div class="jmenu js-jmenu" id="jmenu">
         <div class="row" data-act="judge">Judge mode <span class="sw js-judge-sw"></span></div>
         <ol class="js-mlist">
           <li><a hx-get="screens/home.html" data-s="home"><span>1</span>Home + Squad Goals</a></li>
@@ -87,6 +99,14 @@
           <li><a hx-get="screens/recap.html" data-s="recap"><span>7</span>Sunday recap</a></li>
           <li><a hx-get="screens/unlock.html" data-s="unlock"><span>8</span>100% unlocked</a></li>
           <li><a hx-get="screens/widget.html" data-s="widget"><span>9</span>Widget</a></li>
+          <li class="grp">More flows</li>
+          <li><a hx-get="screens/invite.html" data-s="invite"><span>10</span>Invite (Riya)</a></li>
+          <li><a hx-get="screens/streak.html" data-s="streak"><span>11</span>Streak &amp; freeze</a></li>
+          <li><a hx-get="screens/pay_failed.html" data-s="pay_failed"><span>12</span>Payment failed</a></li>
+          <li><a hx-get="screens/onboarding.html" data-s="onboarding"><span>13</span>First run</a></li>
+          <li><a hx-get="screens/settings.html" data-s="settings"><span>14</span>Settings</a></li>
+          <li><a hx-get="screens/rules.html" data-s="rules"><span>15</span>How it works</a></li>
+          <li><a data-act="vpn" data-s="vpn"><span>16</span>VPN notice</a></li>
         </ol>
       </div>
     </div>

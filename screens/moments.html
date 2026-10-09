@@ -1,31 +1,33 @@
 <section class="scr" data-screen="moments" data-sb="dark" data-time="1:15">
   <template class="notes">
     <div class="nrow"><b class="k k-trigger">Trigger</b><span>Moments are built automatically from public dates, so the app always has a next thing to count down to and a price to check. <i>Solves: Event-based usage.</i></span></div>
-    <div class="nrow"><b class="k k-reward">Variable reward</b><span>Each Moment carries a budget Tata plan with a live price that moves daily (↓ or ↑).</span></div>
+    <div class="nrow"><b class="k k-reward">Variable reward</b><span>Each Moment carries a budget Tata plan with a price that moves daily (↓ or ↑, e.g. Christmas Ginger ↑₹90).</span></div>
+    <div class="nrow"><b class="k k-guard">Brief</b><span><b>Purchase-free open:</b> checking today's price and the countdown needs no purchase. This is the reason to open between orders.</span></div>
     <div class="nrow"><b class="k k-invest">Investment</b><span>Optional: add your college calendar (exams, fest) or payday. Personal dates make it harder to leave.</span></div>
   </template>
 
   <div class="scr-body">
     <div class="topbar">
-      <a class="iconbtn" hx-get="screens/home.html" data-dir="back" aria-label="Back"><svg class="ic"><use href="assets/icons/sprite.svg#i-back"/></svg></a>
-      <div><div class="t">Your Moments</div><div class="st">Auto-built from public dates · prices update daily</div></div>
+      <a class="iconbtn" data-act="back" hx-get="screens/home.html" data-dir="back" aria-label="Back"><svg class="ic"><use href="assets/icons/sprite.svg#i-back"/></svg></a>
+      <div><div class="t">Your Moments</div><div class="st">Auto-built from public dates · prices checked daily</div></div>
     </div>
 
     <div class="jm-banner"><b class="k k-trigger">Trigger</b>The next event is always counting down, so there's a reason to open between big purchases. <span class="pr">Event-based usage</span></div>
 
-    <div class="intro"><svg class="ic"><use href="assets/icons/sprite.svg#i-info"/></svg><span>We track a <b>budget-first Tata plan</b> for each date. Keep your streak to make it cheaper.</span></div>
+    <div class="intro"><svg class="ic"><use href="assets/icons/sprite.svg#i-info"/></svg><span>A <b>Moment</b> is a date worth planning for. We track a <b>budget-first Tata plan</b> for each one. Keep your streak to make it cheaper.</span></div>
 
     <div class="mlist">
       <a class="mom feat jm-host" hx-get="screens/moment_detail.html">
-        <span class="jm"><b class="k-reward">Variable reward</b>Live price</span>
+        <span class="jm"><b class="k-reward">Variable reward</b>Price today</span>
+        <span class="jm l b"><b class="k-guard">Brief</b>Purchase-free open</span>
         <span class="ic2" style="background:rgba(255,255,255,.18)"><svg class="ic"><use href="assets/icons/sprite.svg#i-lamp"/></svg></span>
         <div class="mid">
           <div class="nm">Diwali long weekend</div>
           <div class="dt">Sat 7 – Mon 9 Nov · Delhi → Pune</div>
-          <div class="pl"><span class="live">LIVE</span> Flight <b>₹3,240</b><span class="tick"><svg class="ic"><use href="assets/icons/sprite.svg#i-down"/></svg>₹180</span></div>
-          <div class="unl"><div class="bar"><i data-w="55"></i></div><span>55% unlocked</span></div>
+          <div class="pl">Price today · flight <b>₹3,240</b><span class="tick"><svg class="ic"><use href="assets/icons/sprite.svg#i-down"/></svg>₹180</span></div>
+          <div class="unl"><div class="bar"><i data-w="55"></i></div><span>₹252 off active <span style="opacity:.7;font-weight:500">· 55%</span></span></div>
         </div>
-        <div class="cd"><div class="n">18</div><div class="u">days</div></div>
+        <div class="cd"><div class="n">17</div><div class="u">days</div></div>
       </a>
 
       <a class="mom" data-toast="Prototype: the Diwali plan is the demo Moment">
@@ -33,7 +35,7 @@
         <div class="mid">
           <div class="nm">Big sale day</div>
           <div class="dt">Fri 27 Nov · Croma deals under ₹999</div>
-          <div class="pl"><span class="live">LIVE</span> Earbuds <b>₹899</b><span class="tick"><svg class="ic"><use href="assets/icons/sprite.svg#i-down"/></svg>₹100</span></div>
+          <div class="pl">Price today · earbuds <b>₹899</b><span class="tick"><svg class="ic"><use href="assets/icons/sprite.svg#i-down"/></svg>₹100</span></div>
         </div>
         <div class="cd"><div class="n">37</div><div class="u">days</div></div>
       </a>
@@ -43,7 +45,7 @@
         <div class="mid">
           <div class="nm">Christmas long weekend</div>
           <div class="dt">Fri 25 – Sun 27 Dec · Goa</div>
-          <div class="pl"><span class="live">LIVE</span> Ginger room <b>₹2,150</b>/night<span class="tick" style="color:var(--red);background:var(--red-l)"><svg class="ic" style="animation:none"><use href="assets/icons/sprite.svg#i-up"/></svg>₹90</span></div>
+          <div class="pl">Price today · Ginger room <b>₹2,150</b>/night<span class="tick" style="color:var(--red);background:var(--red-l)"><svg class="ic" style="animation:none"><use href="assets/icons/sprite.svg#i-up"/></svg>₹90</span></div>
         </div>
         <div class="cd"><div class="n">65</div><div class="u">days</div></div>
       </a>

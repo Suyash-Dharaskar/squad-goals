@@ -1,0 +1,109 @@
+<section class="scr" data-screen="streak" data-sb="dark" data-time="1:13">
+  <template class="notes">
+    <div class="nrow"><b class="k k-invest">Investment</b><span>The streak is stored progress: 2 kept weeks = +20% on the ladder; keeping week 3 adds +10% more. Seeing the week fill up is the reason to make the 5th payment on Neu. <i>Solves: Missing hook.</i></span></div>
+    <div class="nrow"><b class="k k-action">Action</b><span>What counts is spelled out: any shop, ₹10+, Neu UPI. A ₹20 chai counts, so nobody has to spend more. <i>Solves: Standalone preference.</i></span></div>
+    <div class="nrow"><b class="k k-guard">Guardrail</b><span>1 free freeze a month and a pause for exams. A missed week never wipes ladder % or coins. This is the anti-dark-pattern answer.</span></div>
+    <div class="nrow"><b class="k k-guard">Anti-farming</b><span>P2P and self transfers don't count; payments must be at 3+ different shops a week.</span></div>
+  </template>
+
+  <div class="scr-body">
+    <div class="topbar">
+      <a class="iconbtn" data-act="back" hx-get="screens/home.html" data-dir="back" aria-label="Back"><svg class="ic"><use href="assets/icons/sprite.svg#i-back"/></svg></a>
+      <div><div class="t">Your streak</div><div class="st">Weeks run Mon–Sun</div></div>
+      <a class="iconbtn" hx-get="screens/settings.html" aria-label="Streak settings"><svg class="ic"><use href="assets/icons/sprite.svg#i-gear"/></svg></a>
+    </div>
+
+    <div class="seg" role="tablist" aria-label="Streak state">
+      <button class="on" role="tab" aria-selected="true" data-act="tab" data-tab="week">This week</button>
+      <button role="tab" aria-selected="false" data-act="tab" data-tab="missed">Missed-week example</button>
+    </div>
+
+    <!-- ============ This week ============ -->
+    <div class="on" data-panel="week">
+      <div class="jm-banner"><b class="k k-invest">Investment</b>2 kept weeks = +20% on the Diwali ladder. One more payment keeps week 3 (+10%). <span class="pr">Missing hook</span></div>
+
+      <div class="stk-hero jm-host" style="margin-top:12px">
+        <span class="jm"><b class="k-invest">Investment</b>Stored progress</span>
+        <div class="top">
+          <span class="flamebox"><svg viewBox="0 0 24 28"><use href="assets/icons/sprite.svg#i-flame"/></svg></span>
+          <div>
+            <div class="t1">2-week streak</div>
+            <div class="t2">Week 3: 4 of 5 payments · 1 more by Sunday keeps it</div>
+          </div>
+        </div>
+        <div class="week" role="img" aria-label="This week: Monday 1 payment, Tuesday 1, Wednesday 2, Thursday today">
+          <div><i class="on">1</i>Mon</div><div><i class="on">1</i>Tue</div><div><i class="on">2</i>Wed</div><div><i class="today">+</i>Thu</div><div><i></i>Fri</div><div><i></i>Sat</div><div><i></i>Sun</div>
+        </div>
+        <div class="pips" role="img" aria-label="4 of 5 payments"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><span>4/5 · 3 shops ✓</span></div>
+      </div>
+
+      <div class="sh">What counts</div>
+      <div class="cardx jm-host">
+        <span class="jm"><b class="k-guard">Guardrail</b>Anti-farming</span>
+        <ul class="ul">
+          <li><span class="yes"><svg class="ic"><use href="assets/icons/sprite.svg#i-check"/></svg></span><span><b>Any shop, ₹10 or more</b><br>Canteen, chai, xerox, bills. Not just Tata brands</span></li>
+          <li><span class="yes"><svg class="ic"><use href="assets/icons/sprite.svg#i-check"/></svg></span><span><b>Paid with Neu UPI</b></span></li>
+          <li><span class="no"><svg class="ic"><use href="assets/icons/sprite.svg#i-x"/></svg></span><span><b>Not P2P or self transfers</b><br>Sending money to friends or your own account doesn't count</span></li>
+          <li><span class="yes"><svg class="ic"><use href="assets/icons/sprite.svg#i-check"/></svg></span><span><b>3+ different shops a week</b><br>So ₹10 back-and-forth at one QR can't fake a streak</span></li>
+        </ul>
+      </div>
+
+      <div class="sh">Safety net</div>
+      <div class="cardx jm-host">
+        <span class="jm"><b class="k-guard">Guardrail</b>No streak anxiety</span>
+        <div class="freeze">
+          <span class="fi" aria-hidden="true">❄️</span>
+          <div><div class="t1">1 free freeze left this month</div><div class="t2">Miss a week and we use it automatically. Your streak survives. Resets 1 Nov.</div></div>
+          <span class="tok" aria-hidden="true"><i></i></span>
+        </div>
+      </div>
+      <div class="toggles" style="margin-top:10px">
+        <div class="trow" role="switch" aria-checked="false" data-act="toggle" data-target=".pausenote" data-on-msg="Streak paused for exams. Nothing is lost" data-off-msg="Streak resumed">
+          <div class="tx">Pause for exams<div class="s">Up to 3 weeks · no reminders · nothing lost</div></div><span class="sw"></span>
+        </div>
+      </div>
+      <div class="note pausenote"><svg class="ic"><use href="assets/icons/sprite.svg#i-clock"/></svg><span><b>Paused till Mon 23 Nov.</b> Your streak, ladder % and NeuCoins are frozen, not lost.</span></div>
+
+      <div class="sh">Your weeks</div>
+      <div class="cardx hist">
+        <div class="h-row"><span class="wk">W3</span><div class="mid"><div class="nm">19–25 Oct · this week</div><div class="s">4 payments so far · 3 shops</div></div><span class="chip p">4/5</span></div>
+        <div class="h-row"><span class="wk">W2</span><div class="mid"><div class="nm">12–18 Oct</div><div class="s">6 payments · 4 shops · +3 NeuCoins</div></div><span class="chip g">Kept +10%</span></div>
+        <div class="h-row"><span class="wk">W1</span><div class="mid"><div class="nm">5–11 Oct</div><div class="s">5 payments · 3 shops · +3 NeuCoins</div></div><span class="chip g">Kept +10%</span></div>
+      </div>
+      <div class="note"><svg class="ic"><use href="assets/icons/sprite.svg#i-info"/></svg><span>Each kept week adds <b>+10%</b> to your Moment's unlock ladder (max 50%) and <b>+3 NeuCoins</b>. <a class="tlink" hx-get="screens/rules.html" style="color:var(--purple);font-weight:600">How it works</a></span></div>
+      <div class="sp"></div>
+    </div>
+
+    <!-- ============ Missed-week variant ============ -->
+    <div data-panel="missed">
+      <div class="jm-banner"><b class="k k-guard">Guardrail</b>A missed week costs nothing you've earned. The free freeze is used automatically. <span class="pr">No dark patterns</span></div>
+
+      <div class="saved-fz jm-host" style="margin-top:12px">
+        <span class="jm"><b class="k-guard">Guardrail</b>Freeze used automatically</span>
+        <div class="big" aria-hidden="true">❄️</div>
+        <div class="t1">Streak saved with your free freeze</div>
+        <div class="t2">Last week you made 3 of 5 payments. We used your free freeze, so your <b>2-week streak</b> continues.</div>
+        <div style="margin-top:10px"><span class="chip n">0 freezes left this month · resets 1 Nov</span></div>
+      </div>
+
+      <div class="sh">Last week</div>
+      <div class="cardx">
+        <div class="week" style="margin-top:0" role="img" aria-label="Last week: 3 payments, freeze used on Sunday">
+          <div><i class="on">1</i>Mon</div><div><i class="miss">–</i>Tue</div><div><i class="on">1</i>Wed</div><div><i class="miss">–</i>Thu</div><div><i class="on">1</i>Fri</div><div><i class="miss">–</i>Sat</div><div><i class="fz">❄</i>Sun</div>
+        </div>
+        <div class="pips" style="margin-top:14px"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><span style="color:#1F5FB8">3/5 · freeze used</span></div>
+      </div>
+
+      <div class="sh">What you keep</div>
+      <div class="cardx">
+        <ul class="ul">
+          <li><span class="yes"><svg class="ic"><use href="assets/icons/sprite.svg#i-check"/></svg></span><span><b>Your 2-week streak</b>, still +20% on the Diwali ladder</span></li>
+          <li><span class="yes"><svg class="ic"><use href="assets/icons/sprite.svg#i-check"/></svg></span><span><b>All your NeuCoins</b> and every unlock you've reached</span></li>
+          <li><span class="no"><svg class="ic"><use href="assets/icons/sprite.svg#i-x"/></svg></span><span>No +3 weekly coins for the frozen week</span></li>
+        </ul>
+      </div>
+      <div class="note"><svg class="ic"><use href="assets/icons/sprite.svg#i-info"/></svg><span><b>No freeze left?</b> The streak restarts at week 1, but your ladder % and coins stay. Nothing you've earned is taken away.</span></div>
+      <div class="actions"><a class="pill pri block" hx-get="screens/home.html" data-dir="back">Start this week</a></div>
+    </div>
+  </div>
+</section>

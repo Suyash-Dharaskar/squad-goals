@@ -1,9 +1,10 @@
 <section class="scr" data-screen="home" data-sb="light" data-time="1:12">
   <template class="notes">
-    <div class="nrow"><b class="k k-invest">Investment</b><span>Streak, next Moment and unlocked % now sit on Home, under quick actions. Today rewards are 3 taps deep. <i>Solves: Missing hook.</i></span></div>
-    <div class="nrow"><b class="k k-trigger">Trigger</b><span>The Diwali card's live fare (↓₹180) gives a reason to open between big purchases. <i>Solves: Event-based usage.</i></span></div>
-    <div class="nrow"><b class="k k-action">Action</b><span>Any ₹10+ merchant UPI payment counts, so the habit rides payments students already make elsewhere. <i>Solves: Standalone preference.</i></span></div>
-    <div class="nrow"><b class="k k-guard">Unchanged</b><span>Categories, Offers, NeuCard and checkout stay the same. No new tabs.</span></div>
+    <div class="nrow"><b class="k k-invest">Investment</b><span>Streak, next Moment and unlocked progress now sit on Home, under quick actions. Today rewards are 3 taps deep. <i>Solves: Missing hook.</i></span></div>
+    <div class="nrow"><b class="k k-invest">Ladder maths</b><span>Progress = streak weeks kept (+10% each, max 50) + Neu UPI payments (+1% each, max 20) + friends who join on Neu and pay once (+10% each, max 30). Aarav now: 20 + 14 + 10 = <b>44%</b>. ₹252 off (5%) unlocks at 50%.</span></div>
+    <div class="nrow"><b class="k k-trigger">Trigger</b><span>The Diwali card's fare (↓₹180 since yesterday) gives a reason to open between big purchases. <i>Solves: Event-based usage.</i></span></div>
+    <div class="nrow"><b class="k k-action">Action</b><span>Hero leads with the biggest reward (up to 15% off a trip); coins are the sub-line. Any ₹10+ merchant UPI payment counts, so the habit rides payments students already make elsewhere. <i>Solves: Standalone preference.</i></span></div>
+    <div class="nrow"><b class="k k-guard">Unchanged</b><span>Categories, Offers, NeuCard and checkout stay the same. No new tabs. The module shows only to verified students.</span></div>
   </template>
 
   <div class="scr-body">
@@ -15,18 +16,18 @@
       </div>
       <div class="hero-ban">
         <div class="art" aria-hidden="true">
-          <div class="five">3</div>
-          <div class="coin3d c3">N</div>
-          <div class="coin3d c1">N</div>
+          <div class="five" style="font-size:78px;top:34px;left:0;letter-spacing:-.04em">15%</div>
+          <div class="coin3d c3" style="left:118px;top:4px">N</div>
+          <div class="coin3d c1" style="right:2px;bottom:0">N</div>
           <div class="coin3d c2">N</div>
         </div>
         <div class="copy jm-host">
           <span class="jm b l" style="bottom:-20px"><b class="k-action">Action</b>Standalone preference</span>
-          <div class="h1">NeuCoins every<br><b>streak week</b></div>
+          <div class="h1" style="font-size:17px"><b>off your next trip,</b><br>just for paying with Neu UPI</div>
           <div class="cta-out" hx-get="screens/pay_success.html">Pay with UPI <svg class="ic"><use href="assets/icons/sprite.svg#i-upi"/></svg></div>
         </div>
       </div>
-      <div class="hero-foot">on any merchant UPI payment ₹10+ · 5 payments a week keeps your streak</div>
+      <div class="hero-foot">Up to 15% · +3 NeuCoins every streak week · any shop, ₹10+ · 5 payments a week keeps your streak</div>
     </div>
 
     <!-- Quick actions + new Squad action -->
@@ -38,21 +39,24 @@
       <a hx-get="screens/squad.html"><span class="badge pp">New</span><span class="ib sq"><svg class="ic"><use href="assets/icons/sprite.svg#i-squad"/></svg></span>Squad</a>
     </div>
 
-    <div class="jm-banner"><b class="k k-invest">Investment</b>Progress is visible on Home for the first time: streak, next Moment, unlocked %. <span class="pr">Missing hook</span></div>
+    <div class="jm-banner"><b class="k k-invest">Investment</b>Progress is visible on Home for the first time: streak, next Moment, rupees unlocked. <span class="pr">Missing hook</span></div>
 
     <!-- NEW: Squad Goals module (NeuPass tile style) -->
     <div class="sg">
       <div class="sg-head">
-        <span class="lbl">Squad Goals</span>
-        <a class="more" hx-get="screens/moments.html">Your Moments <svg class="ic"><use href="assets/icons/sprite.svg#i-chev"/></svg></a>
+        <div style="display:flex;align-items:center;gap:6px;min-width:0">
+          <span class="lbl">Squad Goals</span>
+          <span class="chip g" style="height:20px;padding:0 7px;font-size:10.5px" data-toast="Student status checked once with your college email (prototype)"><svg class="ic"><use href="assets/icons/sprite.svg#i-check"/></svg>Verified student</span>
+        </div>
+        <a class="iconbtn" hx-get="screens/settings.html" aria-label="Squad Goals settings" style="width:32px;height:32px;margin:-6px -6px -6px 0;color:var(--navy)"><svg class="ic" style="width:19px;height:19px"><use href="assets/icons/sprite.svg#i-gear"/></svg></a>
       </div>
 
-      <div class="streak jm-host" hx-get="screens/pay_success.html">
+      <div class="streak jm-host" hx-get="screens/streak.html">
         <span class="jm"><b class="k-invest">Investment</b>Missing hook</span>
         <span class="flamebox"><svg viewBox="0 0 24 28"><use href="assets/icons/sprite.svg#i-flame"/></svg></span>
         <div>
-          <div class="t1">Week 3 streak</div>
-          <div class="t2">4/5 payments this week</div>
+          <div class="t1">2-week streak</div>
+          <div class="t2">Week 3: 4/5 · 1 more keeps it</div>
         </div>
         <div class="dots" aria-label="4 of 5 payments"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
       </div>
@@ -62,24 +66,29 @@
         <div class="mrow">
           <span class="mic"><svg class="ic"><use href="assets/icons/sprite.svg#i-lamp"/></svg></span>
           <div style="flex:1;min-width:0">
-            <div class="k">Diwali long weekend · <b>in 18 days</b></div>
+            <div class="k">Diwali long weekend · <b>in 17 days</b></div>
             <div class="ttl">Delhi → Pune</div>
-            <div class="price"><span>Air India Express</span><span class="amt" data-count="3240" data-from="3420" data-inr data-delay="500" data-dur="1200">₹3,240</span><span class="tick in"><svg class="ic"><use href="assets/icons/sprite.svg#i-down"/></svg><span class="n">₹180</span></span></div>
+            <div class="price"><span>Air India Express</span><span class="amt" data-count="3240" data-from="3420" data-inr data-once="fare-3240" data-delay="500" data-dur="1200">₹3,240</span><span class="tick in" title="↓₹180 since yesterday"><svg class="ic"><use href="assets/icons/sprite.svg#i-down"/></svg><span class="n">₹180</span></span></div>
           </div>
           <svg class="ic" style="width:18px;height:18px;color:#A3A1AD"><use href="assets/icons/sprite.svg#i-chev"/></svg>
         </div>
         <div class="mladder">
-          <div class="bar"><div class="fill" data-w="55"></div>
-            <div class="stops"><i class="on" style="left:25%"></i><i class="on" style="left:50%"></i><i style="left:75%"></i><i style="left:calc(100% - 6px)"></i></div>
+          <div class="bar"><div class="fill" data-w="44"></div>
+            <div class="stops"><i class="on" style="left:25%"></i><i style="left:50%"></i><i style="left:75%"></i><i style="left:calc(100% - 6px)"></i></div>
           </div>
-          <div class="legend"><span><b>55% unlocked</b> · 5% off live</span><span>Next: 10% off at 75%</span></div>
+          <div class="legend"><span><b>₹252 off</b> unlocks at 50%</span><span>44% unlocked</span></div>
         </div>
       </a>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px">
+        <a class="more" hx-get="screens/rules.html" style="font-size:12px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:4px"><svg class="ic" style="width:15px;height:15px"><use href="assets/icons/sprite.svg#i-info"/></svg>How it works</a>
+        <a class="more" hx-get="screens/moments.html" style="font-size:12px;font-weight:600;color:var(--navy);display:flex;align-items:center;gap:2px">Your Moments <svg class="ic" style="width:14px;height:14px"><use href="assets/icons/sprite.svg#i-chev"/></svg></a>
+      </div>
     </div>
 
     <a class="drop-teaser" hx-get="screens/drop.html">
       <span class="gi"><svg class="ic"><use href="assets/icons/sprite.svg#i-gift"/></svg></span>
-      <div><div class="t1">Squad Drop · Friday 6pm</div><div class="t2">Free entry · guaranteed reward</div></div>
+      <div><div class="t1">Squad Drop · opens Fri 6pm</div><div class="t2">in 2d 4h · free entry · guaranteed reward</div></div>
       <svg class="ic"><use href="assets/icons/sprite.svg#i-chev"/></svg>
     </a>
 

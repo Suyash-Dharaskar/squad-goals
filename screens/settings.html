@@ -1,0 +1,57 @@
+<section class="scr" data-screen="settings" data-sb="dark" data-time="1:20">
+  <template class="notes">
+    <div class="nrow"><b class="k k-guard">Guardrail</b><span>Every push can be switched off, one by one. Max 3 Squad Goals pushes a week, none at night.</span></div>
+    <div class="nrow"><b class="k k-guard">Guardrail</b><span>Pause streak for exams and a 1-tap opt-out ("Leave Squad Goals") answer the dark-pattern question directly.</span></div>
+    <div class="nrow"><b class="k k-guard">Privacy</b><span>Friends see your streak and progress, never your payments. No bank data is read.</span></div>
+  </template>
+
+  <div class="scr-body">
+    <div class="topbar">
+      <a class="iconbtn" data-act="back" hx-get="screens/home.html" data-dir="back" aria-label="Back"><svg class="ic"><use href="assets/icons/sprite.svg#i-back"/></svg></a>
+      <div><div class="t">Squad Goals settings</div><div class="st">Notifications, pause, privacy</div></div>
+    </div>
+
+    <div class="jm-banner"><b class="k k-guard">Guardrail</b>Every nudge can be switched off. Pausing and leaving are 1 tap each. <span class="pr">No dark patterns</span></div>
+
+    <div class="sh">Notifications</div>
+    <div class="set-grp jm-host">
+      <span class="jm"><b class="k-guard">Guardrail</b>Max 3 pushes a week</span>
+      <div class="trow" role="switch" aria-checked="true" data-act="toggle" data-on-msg="Sunday recap on" data-off-msg="Sunday recap off">
+        <div class="tx">Sunday recap<div class="s">Sun 8pm · once a week</div></div><span class="sw on"></span>
+      </div>
+      <div class="trow" role="switch" aria-checked="true" data-act="toggle" data-on-msg="Squad Drop reminder on" data-off-msg="Squad Drop reminder off">
+        <div class="tx">Squad Drop<div class="s">Fri 6pm · once a week</div></div><span class="sw on"></span>
+      </div>
+      <div class="trow" role="switch" aria-checked="true" data-act="toggle" data-on-msg="Price alerts on" data-off-msg="Price alerts off">
+        <div class="tx">Price alerts<div class="s">Only when a followed fare moves ₹100+</div></div><span class="sw on"></span>
+      </div>
+      <div class="trow" role="switch" aria-checked="false" data-act="toggle" data-on-msg="Friend activity on: max 1 a day" data-off-msg="Friend activity off">
+        <div class="tx">Friend activity<div class="s">Joins and nudges · max 1 a day</div></div><span class="sw"></span>
+      </div>
+    </div>
+    <div class="note"><svg class="ic"><use href="assets/icons/sprite.svg#i-bell"/></svg><span>Never between 10pm and 8am. Streak reminders stop once your week is kept.</span></div>
+
+    <div class="sh">Streak</div>
+    <div class="set-grp">
+      <div class="trow" role="switch" aria-checked="false" data-act="toggle" data-target=".pausenote" data-on-msg="Streak paused for exams. Nothing is lost" data-off-msg="Streak resumed">
+        <div class="tx">Pause streak (exams)<div class="s">Up to 3 weeks · no reminders · nothing lost</div></div><span class="sw"></span>
+      </div>
+      <a class="trow" hx-get="screens/streak.html" style="color:inherit;text-decoration:none">
+        <div class="tx">Streak &amp; freeze<div class="s">1 free freeze left this month</div></div><svg class="ic" style="width:18px;height:18px;color:#8C8A96"><use href="assets/icons/sprite.svg#i-chev"/></svg>
+      </a>
+    </div>
+    <div class="note pausenote"><svg class="ic"><use href="assets/icons/sprite.svg#i-clock"/></svg><span><b>Paused till Mon 23 Nov.</b> Your streak, ladder % and NeuCoins are frozen, not lost.</span></div>
+
+    <div class="sh">Privacy</div>
+    <div class="privacy jm-host">
+      <span class="jm"><b class="k-guard">Privacy</b>No spend shared</span>
+      <svg class="ic"><use href="assets/icons/sprite.svg#i-lock"/></svg>
+      <span>Friends see your streak and progress, <b>never your payments</b>. No bank data is read.</span>
+    </div>
+
+    <div class="sh">Leave</div>
+    <button class="leave" data-act="leave">Leave Squad Goals</button>
+    <div style="text-align:center;font-size:11.5px;color:var(--muted);margin:8px 24px 0;line-height:1.45">Your NeuCoins and any booked trips stay yours. Rejoin anytime.</div>
+    <div class="linkline" style="padding-top:8px"><a class="tlink" hx-get="screens/rules.html">How Squad Goals works <svg class="ic"><use href="assets/icons/sprite.svg#i-chev"/></svg></a></div>
+  </div>
+</section>

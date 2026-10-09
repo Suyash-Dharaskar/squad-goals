@@ -1,9 +1,10 @@
 <section class="scr" data-screen="pay_success" data-sb="dark" data-time="1:14">
   <template class="notes">
     <div class="nrow"><b class="k k-action">Action</b><span>A ₹60 canteen payment at a non-Tata merchant counts. Today's promo needs ₹299+, which leaves out a ₹20 chai or a ₹150 canteen bill. <i>Solves: Standalone preference.</i></span></div>
-    <div class="nrow"><b class="k k-invest">Investment</b><span>5/5 keeps the week-3 streak: stored progress you'd lose by leaving. <i>Solves: Missing hook.</i></span></div>
-    <div class="nrow"><b class="k k-reward">Reward</b><span>A small <b>guaranteed</b> weekly reward (+3 NeuCoins, brand-funded; with the Drop floor ≈ ₹22 a month max, under the ₹25 cap).</span></div>
-    <div class="nrow"><b class="k k-trigger">Trigger</b><span>Links the daily payment to the next Moment: "2 more weeks to unlock 15%". <i>Solves: Event-based usage.</i></span></div>
+    <div class="nrow"><b class="k k-invest">Investment</b><span>5/5 keeps week 3: stored progress you'd lose by leaving. This one payment moves the plan <b>44% → 55%</b> (+10% streak week, +1% payment) and switches on ₹252 off. <i>Solves: Missing hook.</i></span></div>
+    <div class="nrow"><b class="k k-reward">Reward</b><span>A small <b>guaranteed</b> weekly reward: +3 NeuCoins. Tata-funded reward averages ₹8 per weekly-active student a month (max ~₹22 for a perfect month, hard cap ₹25).</span></div>
+    <div class="nrow"><b class="k k-trigger">Trigger</b><span>Links the daily payment to the next Moment: "Next: 10% off at 75%". <i>Solves: Event-based usage.</i></span></div>
+    <div class="nrow"><b class="k k-guard">Guardrail</b><span>Streak counts at 3+ different shops a week; self and P2P QR payments are excluded, so ₹10 cycling between friends earns nothing.</span></div>
   </template>
 
   <div class="scr-body">
@@ -23,8 +24,8 @@
         <span class="jm"><b class="k-invest">Investment</b>Missing hook</span>
         <span class="flamebox"><svg viewBox="0 0 24 28"><use href="assets/icons/sprite.svg#i-flame"/></svg></span>
         <div style="flex:1">
-          <div class="t1">+1 to your streak</div>
-          <div class="t2">5/5 this week: streak kept 🔥 Week 3</div>
+          <div class="t1">+1 to your streak · 5/5 · week 3 kept</div>
+          <div class="t2">You're now on a 3-week streak 🔥</div>
         </div>
         <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on pop"></i></div>
       </div>
@@ -45,20 +46,24 @@
           <span class="mic"><svg class="ic"><use href="assets/icons/sprite.svg#i-lamp"/></svg></span>
           <div style="flex:1;min-width:0">
             <div class="k">Diwali plan · Delhi → Pune</div>
-            <div class="ttl">2 more streak weeks to unlock 15% off</div>
+            <div class="ttl">₹252 off is now active · 5% off</div>
           </div>
           <svg class="ic" style="width:18px;height:18px;color:#A3A1AD"><use href="assets/icons/sprite.svg#i-chev"/></svg>
         </div>
+        <div class="contrib" style="margin-top:8px"><span class="chip g">+10% streak week</span><span class="chip g">+1% payment</span></div>
         <div class="mladder">
-          <div class="bar"><div class="fill" data-w="55"></div>
+          <div class="bar"><div class="fill" data-w="55" style="width:44%"></div>
             <div class="stops"><i class="on" style="left:25%"></i><i class="on" style="left:50%"></i><i style="left:75%"></i><i style="left:calc(100% - 6px)"></i></div>
           </div>
-          <div class="legend"><span><b>55% unlocked</b> · 5% off live</span><span>15% off at 100%</span></div>
+          <div class="legend"><span><b data-count="55" data-from="44" data-suffix="%" data-delay="300" data-dur="1300">55%</b> unlocked · was 44%</span><span>₹504 off at 75%</span></div>
         </div>
+        <div style="font-size:11.5px;color:#3D5F93;margin-top:8px;line-height:1.4">Next: 10% off at 75% — keep next week's streak (+15%) and get one more friend to join (+10%)</div>
       </a>
     </div>
 
-    <div class="actions" style="padding-top:4px">
+    <div style="font-size:11px;color:var(--muted);text-align:center;padding:10px 20px 0;line-height:1.4">Counts at 3+ different shops a week · self and P2P QR excluded</div>
+
+    <div class="actions" style="padding-top:10px">
       <a class="pill pri block" hx-get="screens/moment_detail.html">View Diwali plan</a>
       <a class="pill sec block" hx-get="screens/home.html" data-dir="back">Done</a>
     </div>

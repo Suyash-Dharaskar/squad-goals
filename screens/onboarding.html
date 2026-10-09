@@ -1,0 +1,47 @@
+<section class="scr" data-screen="onboarding" data-sb="light" data-time="9:05">
+  <template class="notes">
+    <div class="nrow"><b class="k k-invest">Activation</b><span>Activation = streak started <b>or</b> Moment followed in week 1 (25% target). It's 2 taps here, and Diwali is pre-selected so 1 tap is enough.</span></div>
+    <div class="nrow"><b class="k k-action">Action</b><span>"Show up, pay less" in 3 lines: pay ₹10+ anywhere, 5 a week keeps the streak, friends add more. <i>Solves: Standalone preference.</i></span></div>
+    <div class="nrow"><b class="k k-trigger">Trigger</b><span>Following a public Moment (Diwali long weekend) turns on fare alerts: the first external trigger. <i>Solves: Event-based usage.</i></span></div>
+    <div class="nrow"><b class="k k-guard">Guardrail</b><span>Student verification is optional (college email, 1 tap). It enables campus-level pilots without a form.</span></div>
+  </template>
+
+  <div class="scr-body">
+    <div class="fr-hero scr-top">
+      <div class="k">New on Tata Neu · Squad Goals</div>
+      <h1 style="margin:6px 0 0;font-size:28px;line-height:1.1;font-weight:700;position:relative;z-index:1" data-title>Show up,<br>pay less</h1>
+      <div class="t2">Your everyday UPI payments make your next trip cheaper.</div>
+      <ul class="fr-b">
+        <li><span class="n">1</span><span><b>Pay ₹10+ at any shop</b> with Neu UPI. Chai, canteen and xerox all count.</span></li>
+        <li><span class="n">2</span><span><b>5 payments a week keeps your streak</b> and adds +10% to your next trip's unlock ladder.</span></li>
+        <li><span class="n">3</span><span><b>Bring friends:</b> each one who joins adds +10%. Up to 15% off, brand-funded.</span></li>
+      </ul>
+    </div>
+
+    <div class="jm-banner" style="margin-top:12px"><b class="k k-invest">Activation</b>Streak started or Moment followed in week 1 = activated. <span class="pr">25% target</span></div>
+
+    <div class="sh">Two taps to start</div>
+    <div class="jm-host" style="border-radius:20px">
+      <span class="jm" style="right:22px"><b class="k-invest">Activation</b>Streak started or Moment followed, week 1</span>
+      <div class="pick" role="switch" aria-checked="false" data-act="pick" data-on-msg="Streak started: your next ₹10+ Neu UPI payment is day 1" data-off-msg="Streak not started yet">
+        <span class="pi" style="background:linear-gradient(150deg,#FFB23F,#FF7A1A)"><svg class="ic" viewBox="0 0 24 28"><use href="assets/icons/sprite.svg#i-flame"/></svg></span>
+        <div class="mid"><div class="a">Start my streak</div><div class="b">Your first ₹10+ Neu UPI payment starts week 1</div></div>
+        <span class="cb"><svg class="ic"><use href="assets/icons/sprite.svg#i-check"/></svg></span>
+      </div>
+      <div class="pick" role="switch" aria-checked="true" data-act="pick" data-on-msg="Following Diwali long weekend: fare alerts on" data-off-msg="Unfollowed Diwali long weekend">
+        <span class="pi" style="background:linear-gradient(150deg,var(--hero1),var(--hero2))"><svg class="ic"><use href="assets/icons/sprite.svg#i-lamp"/></svg></span>
+        <div class="mid"><div class="a">Follow Diwali long weekend</div><div class="b">Public Moment · Sat 7 – Mon 9 Nov · we watch Delhi → Pune fares for you</div></div>
+        <span class="cb"><svg class="ic"><use href="assets/icons/sprite.svg#i-check"/></svg></span>
+      </div>
+    </div>
+    <div class="act-meter js-act" role="status">1 of 2 picked · counts as activated when you continue</div>
+
+    <div class="chiprow"><span class="chip big" data-act="verify"><svg class="ic"><use href="assets/icons/sprite.svg#i-book"/></svg>Verify student (college email) · optional</span></div>
+
+    <div class="actions">
+      <a class="pill pri block" hx-get="screens/home.html" data-toast="Activated in week 1 ✓ (moment_followed logged)">Go to Home</a>
+    </div>
+    <div class="note" style="margin-top:0"><svg class="ic"><use href="assets/icons/sprite.svg#i-info"/></svg><span>Nothing to fill in, no bank data read. Pause or leave anytime in <a class="tlink" hx-get="screens/settings.html" style="color:var(--purple);font-weight:600">Settings</a>.</span></div>
+    <div class="sp"></div>
+  </div>
+</section>

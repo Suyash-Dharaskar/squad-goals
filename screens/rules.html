@@ -1,0 +1,79 @@
+<section class="scr" data-screen="rules" data-sb="dark" data-time="1:21">
+  <template class="notes">
+    <div class="nrow"><b class="k k-guard">One rule</b><span>Progress = streak weeks + payments + friends, each with its own cap, so no single behaviour can be farmed. Every % on every screen comes from this table.</span></div>
+    <div class="nrow"><b class="k k-guard">Economics</b><span>Max ₹800 off per student per Moment, 1 active unlock at a time, brand-funded and paid only when you book.</span></div>
+    <div class="nrow"><b class="k k-reward">Variable reward</b><span>Squad Drop: free entry, guaranteed floor, odds and last week's winners published. No betting, so it isn't a lottery.</span></div>
+    <div class="nrow"><b class="k k-guard">Guardrail</b><span>Ledger, not wallet: each person pays their own share via Neu UPI, so no PPI licence is needed.</span></div>
+  </template>
+
+  <div class="scr-body">
+    <div class="topbar">
+      <a class="iconbtn" data-act="back" hx-get="screens/home.html" data-dir="back" aria-label="Back"><svg class="ic"><use href="assets/icons/sprite.svg#i-back"/></svg></a>
+      <div><div class="t">How it works</div><div class="st">Squad Goals rules</div></div>
+    </div>
+
+    <div class="jm-banner"><b class="k k-guard">Guardrail</b>One published rule. Every number on every screen comes from this page. <span class="pr">Fair &amp; auditable</span></div>
+
+    <div class="sh">Progress to 100%</div>
+    <div class="cardx jm-host">
+      <span class="jm"><b class="k-invest">Investment</b>3 sources, 3 caps</span>
+      <table class="rtable">
+        <thead><tr><th>Source</th><th>Adds</th><th>Cap</th></tr></thead>
+        <tbody>
+          <tr><td><b>Streak week kept</b><span class="s">5 Neu UPI payments of ₹10+, 3+ shops</span></td><td class="add">+10%/wk</td><td>50%</td></tr>
+          <tr><td><b>Neu UPI merchant payment</b><span class="s">₹10+, any shop</span></td><td class="add">+1% each</td><td>20%</td></tr>
+          <tr><td><b>Friend joins on Neu + first payment</b><span class="s">Opening a link adds nothing</span></td><td class="add">+10% each</td><td>30%</td></tr>
+          <tr class="tot"><td>Total</td><td></td><td>100%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note"><svg class="ic"><use href="assets/icons/sprite.svg#i-info"/></svg><span><b>Aarav on Thursday:</b> 2 streak weeks (20%) + 14 payments (14%) + Riya (10%) = <b>44%</b>. His 5th payment keeps week 3 (+10%) and adds +1% → <b>55%</b>.</span></div>
+
+    <div class="sh">What each step unlocks</div>
+    <div class="cardx">
+      <div class="rungs">
+        <div class="rung"><span class="pct">25%</span><div class="tx"><b>7-day fare lock</b> on today's price</div></div>
+        <div class="rung"><span class="pct">50%</span><div class="tx"><b>5% off</b> the plan</div></div>
+        <div class="rung"><span class="pct">75%</span><div class="tx"><b>10% off + 5 kg extra baggage</b> · fare lock renewed</div></div>
+        <div class="rung"><span class="pct full">100%</span><div class="tx"><b>15% off</b> the plan</div></div>
+      </div>
+    </div>
+
+    <div class="sh">Caps</div>
+    <div class="caps jm-host">
+      <span class="jm"><b class="k-guard">Economics</b>Capped, brand-funded</span>
+      <div><b>₹800</b><span>max discount per student per Moment</span></div>
+      <div><b>1</b><span>active unlock at a time</span></div>
+      <div style="grid-column:1/-1"><b style="font-size:14px">Paid only when you book</b><span>Discounts are brand-funded and paid only when you book. Nothing is charged to lock a fare.</span></div>
+    </div>
+
+    <div class="sh">NeuCoins</div>
+    <div class="cardx">
+      <ul class="ul">
+        <li><span class="yes">+3</span><span><b>Every kept streak week</b></span></li>
+        <li><span class="yes">+2</span><span><b>Guaranteed floor in every Squad Drop</b></span></li>
+        <li><span class="no" style="background:var(--tile);color:var(--ink2)"><svg class="ic"><use href="assets/icons/sprite.svg#i-clock"/></svg></span><span>Expire after <b>12 months</b> · non-transferable</span></li>
+      </ul>
+    </div>
+
+    <div class="sh">Squad Drop</div>
+    <div class="cardx jm-host">
+      <span class="jm"><b class="k-reward">Variable reward</b>Not a lottery</span>
+      <ul class="ul">
+        <li><span class="yes"><svg class="ic"><use href="assets/icons/sprite.svg#i-check"/></svg></span><span><b>Free entry.</b> No purchase needed</span></li>
+        <li><span class="yes"><svg class="ic"><use href="assets/icons/sprite.svg#i-check"/></svg></span><span><b>Guaranteed floor:</b> everyone gets at least +2 NeuCoins</span></li>
+        <li><span class="yes"><svg class="ic"><use href="assets/icons/sprite.svg#i-check"/></svg></span><span><b>Odds and last week's winners are published</b> · <a class="tlink" hx-get="screens/drop.html" style="color:var(--purple);font-weight:600">see this week's</a></span></li>
+        <li><span class="no"><svg class="ic"><use href="assets/icons/sprite.svg#i-x"/></svg></span><span><b>No betting</b>, no paid entries, no cash prizes</span></li>
+      </ul>
+    </div>
+
+    <div class="sh">Money</div>
+    <div class="cardx jm-host">
+      <span class="jm"><b class="k-guard">Guardrail</b>No pooled wallet</span>
+      <div style="font-size:13px;line-height:1.45;color:var(--ink2)"><b style="color:var(--ink)">Ledger, not wallet.</b> Each person pays their own share via Neu UPI. Neu never holds the squad's money.</div>
+    </div>
+
+    <div class="note"><svg class="ic"><use href="assets/icons/sprite.svg#i-lock"/></svg><span><b>Anti-farming:</b> streak payments must be at 3+ different shops a week. P2P, self transfers and ₹10 loops between friends' QR codes don't count. One account per phone number.</span></div>
+    <div class="sp"></div>
+  </div>
+</section>

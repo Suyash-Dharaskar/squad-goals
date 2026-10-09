@@ -1,8 +1,9 @@
 <section class="scr dark" data-screen="drop" data-sb="light" data-time="6:02">
   <template class="notes">
     <div class="nrow"><b class="k k-trigger">Trigger</b><span>A fixed weekly time slot (Friday 6pm) that the whole squad opens together. <i>Solves: Missing hook.</i></span></div>
-    <div class="nrow"><b class="k k-reward">Variable reward</b><span>A guaranteed floor (+2 NeuCoins, brand-funded) plus a variable partner boost tied to the Moment (e.g. extra 5 kg baggage).</span></div>
-    <div class="nrow"><b class="k k-guard">Guardrail</b><span>Free to enter, guaranteed reward, odds published. No staking of coins and no "bet" or "jackpot" wording.</span></div>
+    <div class="nrow"><b class="k k-reward">Variable reward</b><span>A guaranteed floor (+2 NeuCoins, brand-funded by Tata brands such as Air India Express and Ginger) plus a variable partner boost tied to the Moment (e.g. extra 5 kg baggage). Cost: Tata-funded reward averages ₹8 per weekly-active student a month (max ~₹22 for a perfect month, hard cap ₹25).</span></div>
+    <div class="nrow"><b class="k k-guard">Guardrail</b><span>Free to enter, guaranteed reward, odds published. No staking of coins and no "bet" or "jackpot" wording. Missed the 6–9pm window? The floor coins are auto-credited, so nobody is punished for being busy.</span></div>
+    <div class="nrow"><b class="k k-guard">Brief</b><span><b>Purchase-free open:</b> a weekly reason to open the app that needs no order and no payment.</span></div>
   </template>
 
   <div class="stars" aria-hidden="true">
@@ -16,7 +17,7 @@
 
   <div class="scr-body">
     <div class="topbar on-dark">
-      <a class="iconbtn" hx-get="screens/squad.html" data-dir="back" aria-label="Back"><svg class="ic"><use href="assets/icons/sprite.svg#i-back"/></svg></a>
+      <a class="iconbtn" data-act="back" hx-get="screens/squad.html" data-dir="back" aria-label="Back"><svg class="ic"><use href="assets/icons/sprite.svg#i-back"/></svg></a>
       <div class="t" style="font-size:15px">Squad Drop</div>
       <span class="chip w" style="margin-left:auto;margin-right:6px"><span class="live" style="color:#FFB3C7">LIVE</span> till 9pm</span>
     </div>
@@ -26,11 +27,12 @@
     <div class="dhead">
       <span class="k"><svg class="ic" style="width:14px;height:14px"><use href="assets/icons/sprite.svg#i-clock"/></svg>Friday 6pm</span>
       <h2>Your Squad Drop is here</h2>
-      <p class="js-pre">Riya, Kabir and Meera have one waiting too</p>
+      <p class="js-pre">Riya has one waiting too. Kabir and Meera get theirs once they join Neu.</p>
     </div>
 
     <div class="box-wrap jm-host">
       <span class="jm" style="top:6px;right:16px"><b class="k-reward">Variable reward</b>Missing hook</span>
+      <span class="jm l" style="top:34px;left:16px"><b class="k-guard">Brief</b>Purchase-free open</span>
       <div class="mystery" data-act="reveal" role="button" aria-label="Tap to reveal">
         <svg class="gbox" viewBox="0 0 120 120" aria-hidden="true">
           <rect x="18" y="50" width="84" height="56" rx="8" fill="#FFD66B"/><rect x="18" y="50" width="84" height="14" fill="#F2B33D"/>
@@ -58,6 +60,7 @@
     <div class="fine jm-host" style="margin:0 20px">
       <span class="jm b" style="bottom:-28px"><b class="k-guard">Guardrail</b>Free · floor · odds</span>
       <b>Free to enter · guaranteed reward · odds published</b><br>
+      <span style="opacity:.85">Missed it? Floor coins auto-credited.</span><br>
       <span class="oddslink" data-act="odds">View odds</span>
     </div>
     <div class="odds">

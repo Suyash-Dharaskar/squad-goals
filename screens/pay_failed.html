@@ -1,0 +1,45 @@
+<section class="scr" data-screen="pay_failed" data-sb="dark" data-time="1:14">
+  <template class="notes">
+    <div class="nrow"><b class="k k-guard">Guardrail</b><span>UPI failure is the most common Neu complaint. A failed payment never counts against the streak, so a bank outage can't cost a student their week.</span></div>
+    <div class="nrow"><b class="k k-guard">Trust</b><span>Clear reason ("bank didn't respond"), 1-tap retry and an auto-refund promise within 48h. No "call support" dead end.</span></div>
+    <div class="nrow"><b class="k k-invest">Investment</b><span>The streak stays at 4/5, so the retry (or the next chai) still finishes the week. <i>Solves: Missing hook.</i></span></div>
+  </template>
+
+  <div class="scr-body">
+    <div class="failtop scr-top">
+      <div class="xring" aria-hidden="true"><svg class="ic"><use href="assets/icons/sprite.svg#i-x"/></svg></div>
+      <div class="paid-amt" style="margin-top:12px">₹60</div>
+      <h1 class="paid-to" style="margin:6px 0 0" data-title>Payment failed at Sharma Canteen</h1>
+      <div class="paid-meta">Neu UPI · 1:14 pm · UPI ref ••4821</div>
+      <span class="why"><svg class="ic" style="width:14px;height:14px"><use href="assets/icons/sprite.svg#i-info"/></svg>Bank didn't respond</span>
+    </div>
+
+    <div class="jm-banner"><b class="k k-guard">Guardrail</b>A failed payment never costs a streak. Retry is 1 tap; any debit is auto-refunded. <span class="pr">Trust</span></div>
+
+    <div class="stack">
+      <div class="rew np jm-host">
+        <span class="jm"><b class="k-guard">Guardrail</b>Streak protected</span>
+        <span class="flamebox"><svg viewBox="0 0 24 28"><use href="assets/icons/sprite.svg#i-flame"/></svg></span>
+        <div style="flex:1">
+          <div class="t1">Your streak is safe</div>
+          <div class="t2">Failed payments never count against you. Still 4/5 this week.</div>
+        </div>
+        <div class="dots" role="img" aria-label="4 of 5 payments"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+      </div>
+
+      <div class="rew tile">
+        <span class="gic" style="width:40px;height:40px;border-radius:12px;background:#fff;color:var(--navy);display:grid;place-items:center;flex:none"><svg class="ic"><use href="assets/icons/sprite.svg#i-clock"/></svg></span>
+        <div>
+          <div class="t1" style="font-size:14.5px">If money was debited, it's auto-refunded within 48h</div>
+          <div class="t2" style="color:var(--ink2)">Back to the same account. No need to call anyone. Ref ••4821</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions" style="padding-top:4px">
+      <button class="pill pri block" data-act="pay-retry"><svg class="ic" style="width:18px;height:18px"><use href="assets/icons/sprite.svg#i-upi"/></svg>Retry ₹60 with Neu UPI</button>
+      <a class="pill sec block" hx-get="screens/home.html" data-dir="back">Back to Home</a>
+    </div>
+    <div class="linkline"><span class="tlink" data-toast="Pick another linked bank account (prototype)">Try a different bank account</span></div>
+  </div>
+</section>

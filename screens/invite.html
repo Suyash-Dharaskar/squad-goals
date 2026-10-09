@@ -1,0 +1,114 @@
+<section class="scr" data-screen="invite" data-sb="light" data-time="7:42">
+  <template class="notes">
+    <div class="nrow"><b class="k k-trigger">Trigger</b><span>Riya isn't on Neu. Her trigger is a friend, not an ad: Aarav's WhatsApp card shows the plan and the live price. <i>Solves: Missing hook (cold start).</i></span></div>
+    <div class="nrow"><b class="k k-action">Action</b><span>The link opens a web page: she sees the plan without installing anything. Joining is 1 step (phone + OTP). <i>Solves: Standalone preference.</i></span></div>
+    <div class="nrow"><b class="k k-invest">Investment</b><span>Her join + first Neu UPI payment adds +10% for the squad (34% → 44%, the Home number on Thursday). The squad becomes a social graph on Neu.</span></div>
+    <div class="nrow"><b class="k k-guard">Guardrail</b><span>Opening the link adds nothing. Only a verified join + first payment counts, so links can't be farmed.</span></div>
+  </template>
+
+  <div class="scr-body">
+    <!-- ============ Panel 1: WhatsApp chat on Riya's phone (generic chat mock, no real branding) ============ -->
+    <div class="wa on" data-panel="wa" data-sb="light">
+      <div class="wa-hd">
+        <a class="iconbtn" data-act="back" hx-get="screens/squad.html" data-dir="back" aria-label="Back"><svg class="ic"><use href="assets/icons/sprite.svg#i-back"/></svg></a>
+        <span class="av a">A</span>
+        <div style="flex:1;min-width:0"><div class="nm" data-title>Aarav</div><div class="s">online</div></div>
+        <span class="iconbtn" data-toast="Calls aren't part of this prototype"><svg class="ic"><use href="assets/icons/sprite.svg#i-call"/></svg></span>
+      </div>
+
+      <div class="seg dk" role="tablist" aria-label="Riya's view" style="margin:10px 16px 0;background:rgba(31,95,82,.14)">
+        <button class="on" role="tab" aria-selected="true" data-act="tab" data-tab="wa" style="color:#123">1 · WhatsApp invite</button>
+        <button role="tab" aria-selected="false" data-act="tab" data-tab="web" style="color:#123">2 · Join page, no app</button>
+      </div>
+
+      <div class="wa-chat">
+        <span class="wa-day">Today</span>
+        <div class="bub"><div class="sn">Aarav</div>Riyaaa 🪔 Diwali long weekend in Pune? Kabir and Meera are in<time>7:38 pm</time></div>
+        <div class="bub jm-host">
+          <span class="jm"><b class="k-trigger">Trigger</b>A friend, not an ad</span>
+          <a class="lp" data-act="tab" data-tab="web" aria-label="Open the invite link">
+            <div class="art">
+              <div class="k">Squad Goals · on Tata Neu</div>
+              <div class="ttl">Help cut our Diwali trip price</div>
+              <div class="pr">Delhi → Pune · <s>₹5,040</s> <b>up to ₹4,284</b></div>
+            </div>
+            <div class="meta">
+              <div class="a">Aarav invited you · join to cut the price for all 4</div>
+              <div class="b">squad.example/diwali-aarav · opens in your browser</div>
+            </div>
+          </a>
+          every friend who joins knocks more off. you don't need the app to see the plan<time>7:39 pm</time>
+        </div>
+        <div class="bub me">wait how much is the flight 👀<time>7:41 pm ✓✓</time></div>
+        <div class="bub"><div class="sn">Aarav</div>₹3,240 today, dropped ₹180 since yesterday. tap the link<time>7:42 pm</time></div>
+      </div>
+
+      <div class="wa-in">
+        <div class="f">Message</div>
+        <span class="snd" data-toast="Chat is a static mock in this prototype"><svg class="ic"><use href="assets/icons/sprite.svg#i-send"/></svg></span>
+      </div>
+    </div>
+
+    <!-- ============ Panel 2: web landing page (no app needed to view) ============ -->
+    <div data-panel="web" data-sb="dark">
+      <div class="br">
+        <div class="url"><svg class="ic"><use href="assets/icons/sprite.svg#i-lock"/></svg><span style="color:var(--ink2)">squad.example<span style="color:var(--muted)">/diwali-aarav</span></span></div>
+      </div>
+
+      <div class="seg" role="tablist" aria-label="Riya's view" style="margin-top:10px">
+        <button role="tab" aria-selected="false" data-act="tab" data-tab="wa">1 · WhatsApp invite</button>
+        <button class="on" role="tab" aria-selected="true" data-act="tab" data-tab="web">2 · Join page, no app</button>
+      </div>
+
+      <div class="jm-banner"><b class="k k-action">Action</b>Cold start: Riya sees the plan in her browser and joins with a 1-step OTP. No install needed to look. <span class="pr">Cold start</span></div>
+
+      <div class="land-hero jm-host">
+        <span class="jm"><b class="k-invest">Investment</b>Social graph</span>
+        <div class="k">Squad Goals · on Tata Neu</div>
+        <h2 class="t1" style="margin:4px 0 0" data-title>Aarav invited you to Diwali in Pune 🪔</h2>
+        <div class="t2">Sat 7 – Mon 9 Nov · Delhi → Pune · plan is <b>34% unlocked</b></div>
+        <div class="faces">
+          <span class="av a">A</span><span class="av ghost">K</span><span class="av m pend">M</span><span class="av ghost" aria-label="You">R</span>
+          <span class="lbl2">Aarav (host), Kabir, Meera + you</span>
+        </div>
+      </div>
+
+      <div class="sh">What you get</div>
+      <div class="cardx jm-host">
+        <span class="jm"><b class="k-action">Action</b>Cold start</span>
+        <ul class="ul gets">
+          <li><span class="gi p">+10%</span><span><b>Join on Neu + make your first payment</b> and the squad's plan moves +10%: 34% → 44%, close to ₹252 off for everyone at 50%</span></li>
+          <li><span class="gi g">₹</span><span><b>You get the same discounts on your own share:</b> ₹5,040 now, down to ₹4,284 as the plan unlocks</span></li>
+          <li><span class="gi n">₹0</span><span><b>No pooled money.</b> You book and pay only your own seat, with Neu UPI, when you're ready</span></li>
+        </ul>
+      </div>
+
+      <div class="sh" data-plan>The plan · live prices</div>
+      <div class="plan">
+        <div class="prow">
+          <span class="pic air"><svg class="ic"><use href="assets/icons/sprite.svg#i-plane"/></svg></span>
+          <div class="mid"><div class="a">Air India Express</div><div class="b">DEL → PNQ · Sat 7 Nov · 06:10</div></div>
+          <div class="p"><div class="amt">₹3,240</div><span class="tick"><svg class="ic"><use href="assets/icons/sprite.svg#i-down"/></svg><span class="n">₹180</span></span></div>
+        </div>
+      </div>
+      <div class="plan">
+        <div class="prow">
+          <span class="pic gin"><svg class="ic"><use href="assets/icons/sprite.svg#i-bed"/></svg></span>
+          <div class="mid"><div class="a">Ginger, Pune</div><div class="b">2 nights · twin share · ₹900 per person per night</div></div>
+          <div class="p"><div class="amt">₹1,800</div><div class="b" style="font-size:11px;color:var(--muted)">your half</div></div>
+        </div>
+        <div class="livep"><span class="k">Your share today</span><span class="v">₹5,040</span></div>
+        <div class="livep" style="border-top:0;margin-top:0;padding-top:4px"><span class="k">At 100% unlocked (15% off)</span><span class="v" style="color:var(--green)"><s>₹5,040</s>₹4,284</span></div>
+      </div>
+
+      <div class="actions">
+        <button class="pill pri block" data-act="otp"><svg class="ic" style="width:18px;height:18px"><use href="assets/icons/sprite.svg#i-phone"/></svg>Continue on Tata Neu</button>
+        <div style="text-align:center;font-size:11.5px;color:var(--muted);margin-top:-4px">1 step: phone number + OTP. No forms, no card.</div>
+        <div class="otp-done" role="status"><span class="ok"><svg class="ic"><use href="assets/icons/sprite.svg#i-check"/></svg></span><span><b>You're in the squad.</b> Your first ₹10+ Neu UPI payment adds +10% for all 4 of you.</span></div>
+        <button class="pill sec block" data-act="view-plan">Just view the plan</button>
+      </div>
+      <div class="note" style="margin-top:0"><svg class="ic"><use href="assets/icons/sprite.svg#i-info"/></svg><span>Opening this link adds nothing to the plan. Only a friend who <b>joins on Neu and makes a first payment</b> counts (+10%, max 30% from friends).</span></div>
+      <div class="sp"></div>
+    </div>
+  </div>
+</section>

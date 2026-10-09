@@ -8,14 +8,24 @@ The locked feature "Squad Goals" (see `research/08_final_spec.md`) has four laye
 | # | Screen file | What it shows |
 |---|---|---|
 | 1 | `screens/home.html` | Current Home look + the Squad Goals module under quick actions + new "Squad" quick action |
-| 2 | `screens/pay_success.html` | ₹60 at Sharma Canteen → streak kept 5/5, +5 NeuCoins (guaranteed), Diwali progress |
+| 2 | `screens/pay_success.html` | ₹60 at Sharma Canteen → 5th payment keeps week 3 → progress 44% → 55%, ₹252 off goes live, +3 NeuCoins (guaranteed) |
 | 3 | `screens/moments.html` | Auto-built Moments from public dates, college-calendar and payday toggles |
-| 4 | `screens/moment_detail.html` | Diwali plan (Air India Express + Ginger), 7-day sparkline, unlock ladder at 55%, fare lock |
-| 5 | `screens/squad.html` | Members (Kabir as a WhatsApp "ghost"), +10% from friends, each pays their own share (ledger only) |
-| 6 | `screens/drop.html` | Friday 6pm Squad Drop: tap to reveal, guaranteed +10 NeuCoins + baggage boost, odds published |
+| 4 | `screens/moment_detail.html` | Diwali plan (Air India Express + Ginger), 7-day price trend, progress 55% (streak 30 + payments 15 + friends 10), fare lock |
+| 5 | `screens/squad.html` | Members (Riya joined +10%; Kabir via WhatsApp, not on Neu yet), each pays their own share (ledger only) |
+| 6 | `screens/drop.html` | Friday 6pm Squad Drop: tap to reveal, guaranteed +2 NeuCoins + partner boost, odds published |
 | 7 | `screens/recap.html` | Sunday 8pm lock-screen push → weekly recap card |
 | 8 | `screens/unlock.html` | 100% unlocked → checkout summary (saved ₹756 = 15% of ₹5,040); Book is a dummy |
 | 9 | `screens/widget.html` | Android home-screen widget |
+| 10 | `screens/invite.html` | Riya's side: WhatsApp invite → join page that works without the app |
+| 11 | `screens/streak.html` | Streak rules, this week's dots, free monthly freeze, missed-week state, pause for exams |
+| 12 | `screens/pay_failed.html` | Failed payment: streak is safe, auto-refund note |
+| 13 | `screens/onboarding.html` | First run (activation): start streak + follow a Moment |
+| 14 | `screens/settings.html` | Notification toggles, pause, privacy, leave Squad Goals |
+| 15 | `screens/rules.html` | How it works: progress rule, unlock rungs, caps, coins, Drop odds |
+
+**Progress rule:** streak week kept (5 Neu UPI payments ₹10+, any shop) +10% each, cap 50% · each Neu UPI merchant payment +1%, cap 20% · each friend who joins on Neu and makes a first payment +10%, cap 30%. Unlocks: 25% 7-day fare lock · 50% 5% off · 75% 10% off + 5 kg baggage + lock renewed · 100% 15% off. Discounts are brand-funded and paid only on booking.
+
+**Metric events the prototype implies:** `streak_started` / `moment_followed` (activation) · `neu_upi_merchant_payment` · `streak_week_kept` · `freeze_used` · `friend_invited` / `friend_joined` · `price_alert_opened` · `drop_opened` · `recap_opened` · `unlock_booked`. An "active day" is any day with one of these; a "purchase-free day" has no shopping order.
 
 **Judge mode** (side panel on desktop, "JM" floating button on mobile, or press `J`) overlays each screen with its Hook stage (Trigger / Action / Variable reward / Investment / Guardrail) and the case problem it solves (Event-based usage / Standalone preference / Missing hook).
 
