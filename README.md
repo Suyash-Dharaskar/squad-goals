@@ -1,6 +1,6 @@
 # Squad Goals on Tata Neu: clickable concept prototype
 
-> **Disclaimer:** Concept prototype for the IIM Raipur case competition. **Not affiliated with, endorsed by or connected to Tata Digital or any Tata company.** All users (Aarav, Riya, Kabir, Meera), prices and dates are fictional. There is no real login, payment, booking or personal-data collection. Brand names appear only as text; every icon and illustration was drawn for this prototype, and no real logos or app images are used.
+> **Disclaimer:** Concept prototype by **Creat0rs, IIM Lucknow** for the IIM Raipur case competition. **Not affiliated with, endorsed by or connected to Tata Digital or any Tata company.** All users (Aarav, Riya, Kabir, Meera), prices and dates are fictional. There is no real login, payment, booking or personal-data collection. Brand names appear only as text; every icon and illustration was drawn for this prototype, and no real logos or app images are used.
 
 ## What it shows
 The locked feature "Squad Goals" (see `research/08_final_spec.md`) has four layers: Streak, Moments, Show up pay less (unlock ladder) and Squad. It's shown as 9 screens styled after the current Tata Neu app:
