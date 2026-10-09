@@ -29,8 +29,8 @@
   function markSeen(k) { seen[k] = 1; try { sessionStorage.setItem("sg-cu:" + k, "1"); } catch (e) {} }
 
   /* ---------------- Judge mode ---------------- */
-  var judge = false;
-  try { judge = localStorage.getItem("sg-judge") === "1"; } catch (e) {}
+  var judge = true; /* ON by default for judges; user can switch off (remembered) */
+  try { var js = localStorage.getItem("sg-judge"); if (js !== null) judge = js === "1"; } catch (e) {}
   if (params.has("judge")) judge = params.get("judge") === "1";
   function setJudge(on, save) {
     judge = !!on;
