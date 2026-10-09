@@ -1,0 +1,79 @@
+<section class="scr dark" data-screen="drop" data-sb="light" data-time="6:02">
+  <template class="notes">
+    <div class="nrow"><b class="k k-trigger">Trigger</b><span>A fixed weekly time slot (Friday 6pm) that the whole squad opens together. <i>Solves: Missing hook.</i></span></div>
+    <div class="nrow"><b class="k k-reward">Variable reward</b><span>A guaranteed floor (+10 NeuCoins) plus a variable partner boost tied to the Moment (e.g. extra 5 kg baggage).</span></div>
+    <div class="nrow"><b class="k k-guard">Guardrail</b><span>Free to enter, guaranteed reward, odds published. No staking of coins and no "bet" or "jackpot" wording.</span></div>
+  </template>
+
+  <div class="stars" aria-hidden="true">
+    <i style="left:12%;top:16%;--s:12px;--d:.2s"><svg viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-spark"/></svg></i>
+    <i style="left:82%;top:12%;--s:16px;--d:.9s"><svg viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-spark"/></svg></i>
+    <i style="left:72%;top:40%;--s:10px;--d:1.4s"><svg viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-spark"/></svg></i>
+    <i style="left:8%;top:52%;--s:14px;--d:.5s"><svg viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-spark"/></svg></i>
+    <i style="left:88%;top:62%;--s:11px;--d:1.8s"><svg viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-spark"/></svg></i>
+    <i style="left:22%;top:78%;--s:9px;--d:1.1s"><svg viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-spark"/></svg></i>
+  </div>
+
+  <div class="scr-body">
+    <div class="topbar on-dark">
+      <a class="iconbtn" hx-get="screens/squad.html" data-dir="back" aria-label="Back"><svg class="ic"><use href="assets/icons/sprite.svg#i-back"/></svg></a>
+      <div class="t" style="font-size:15px">Squad Drop</div>
+      <span class="chip w" style="margin-left:auto;margin-right:6px"><span class="live" style="color:#FFB3C7">LIVE</span> till 9pm</span>
+    </div>
+
+    <div class="jm-banner"><b class="k k-reward">Variable reward</b>Guaranteed floor plus a partner boost: free to enter, odds published. <span class="pr">Missing hook</span></div>
+
+    <div class="dhead">
+      <span class="k"><svg class="ic" style="width:14px;height:14px"><use href="assets/icons/sprite.svg#i-clock"/></svg>Friday 6pm</span>
+      <h2>Your Squad Drop is here</h2>
+      <p class="js-pre">Riya, Kabir and Meera have one waiting too</p>
+    </div>
+
+    <div class="box-wrap jm-host">
+      <span class="jm" style="top:6px;right:16px"><b class="k-reward">Variable reward</b>Missing hook</span>
+      <div class="mystery" data-act="reveal" role="button" aria-label="Tap to reveal">
+        <svg class="gbox" viewBox="0 0 120 120" aria-hidden="true">
+          <rect x="18" y="50" width="84" height="56" rx="8" fill="#FFD66B"/><rect x="18" y="50" width="84" height="14" fill="#F2B33D"/>
+          <rect x="12" y="38" width="96" height="20" rx="6" fill="#FFE59A"/>
+          <rect x="53" y="38" width="14" height="68" fill="#E5197E"/>
+          <path d="M60 38c-6-16-28-20-28-8 0 8 16 8 28 8zM60 38c6-16 28-20 28-8 0 8-16 8-28 8z" fill="none" stroke="#E5197E" stroke-width="7" stroke-linejoin="round"/>
+        </svg>
+        <span class="tap">Tap to reveal</span>
+      </div>
+      <div class="reveal">
+        <span class="gl">Guaranteed reward</span>
+        <div class="big"><svg viewBox="0 0 24 24"><use href="assets/icons/sprite.svg#i-coin"/></svg>+10 <span style="font-size:20px;font-weight:600">NeuCoins</span></div>
+        <div class="boostcard">
+          <span class="pic air" style="width:46px;height:46px;border-radius:14px"><svg class="ic"><use href="assets/icons/sprite.svg#i-suitcase"/></svg></span>
+          <div>
+            <div class="t0">Partner boost</div>
+            <div class="t1">Air India Express: extra 5 kg baggage on your Diwali booking</div>
+            <div class="t2">Auto-added to your Diwali plan</div>
+          </div>
+        </div>
+        <div class="squadwin"><span class="av r">R</span>Riya got a ₹100 Ginger voucher</div>
+      </div>
+    </div>
+
+    <div class="fine jm-host" style="margin:0 20px">
+      <span class="jm b" style="bottom:-28px"><b class="k-guard">Guardrail</b>Free · floor · odds</span>
+      <b>Free to enter · guaranteed reward · odds published</b><br>
+      <span class="oddslink" data-act="odds">View odds</span>
+    </div>
+    <div class="odds">
+      <table>
+        <tr><td>+10 NeuCoins (floor)</td><td>Everyone</td></tr>
+        <tr><td>+ Fare-lock extended by 3 days</td><td>1 in 2</td></tr>
+        <tr><td>+ Extra 5 kg baggage (Air India Express)</td><td>1 in 4</td></tr>
+        <tr><td>+ ₹100 Ginger voucher</td><td>1 in 4</td></tr>
+      </table>
+      <div style="opacity:.7;margin-top:4px">One boost per person per week. Coins can't be staked or transferred.</div>
+    </div>
+
+    <div class="after">
+      <a class="pill block" style="background:#fff;color:var(--purple-d)" hx-get="screens/moment_detail.html">See it on your Diwali plan</a>
+      <a class="pill glass block" hx-get="screens/unlock.html">Fast-forward: 100% unlocked</a>
+    </div>
+    <div style="height:16px"></div>
+  </div>
+</section>

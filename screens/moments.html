@@ -1,0 +1,102 @@
+<section class="scr" data-screen="moments" data-sb="dark" data-time="1:15">
+  <template class="notes">
+    <div class="nrow"><b class="k k-trigger">Trigger</b><span>Moments are built automatically from public dates, so the app always has a next thing to count down to and a price to check. <i>Solves: Event-based usage.</i></span></div>
+    <div class="nrow"><b class="k k-reward">Variable reward</b><span>Each Moment carries a budget Tata plan with a live price that moves daily (↓ or ↑).</span></div>
+    <div class="nrow"><b class="k k-invest">Investment</b><span>Optional: add your college calendar (exams, fest) or payday. Personal dates make it harder to leave.</span></div>
+  </template>
+
+  <div class="scr-body">
+    <div class="topbar">
+      <a class="iconbtn" hx-get="screens/home.html" data-dir="back" aria-label="Back"><svg class="ic"><use href="assets/icons/sprite.svg#i-back"/></svg></a>
+      <div><div class="t">Your Moments</div><div class="st">Auto-built from public dates · prices update daily</div></div>
+    </div>
+
+    <div class="jm-banner"><b class="k k-trigger">Trigger</b>The next event is always counting down, so there's a reason to open between big purchases. <span class="pr">Event-based usage</span></div>
+
+    <div class="intro"><svg class="ic"><use href="assets/icons/sprite.svg#i-info"/></svg><span>We track a <b>budget-first Tata plan</b> for each date. Keep your streak to make it cheaper.</span></div>
+
+    <div class="mlist">
+      <a class="mom feat jm-host" hx-get="screens/moment_detail.html">
+        <span class="jm"><b class="k-reward">Variable reward</b>Live price</span>
+        <span class="ic2" style="background:rgba(255,255,255,.18)"><svg class="ic"><use href="assets/icons/sprite.svg#i-lamp"/></svg></span>
+        <div class="mid">
+          <div class="nm">Diwali long weekend</div>
+          <div class="dt">Sat 7 – Mon 9 Nov · Delhi → Pune</div>
+          <div class="pl"><span class="live">LIVE</span> Flight <b>₹3,240</b><span class="tick"><svg class="ic"><use href="assets/icons/sprite.svg#i-down"/></svg>₹180</span></div>
+          <div class="unl"><div class="bar"><i data-w="55"></i></div><span>55% unlocked</span></div>
+        </div>
+        <div class="cd"><div class="n">18</div><div class="u">days</div></div>
+      </a>
+
+      <a class="mom" data-toast="Prototype: the Diwali plan is the demo Moment">
+        <span class="ic2" style="background:linear-gradient(150deg,#FF6B8B,#D61F5C)"><svg class="ic"><use href="assets/icons/sprite.svg#i-bag"/></svg></span>
+        <div class="mid">
+          <div class="nm">Big sale day</div>
+          <div class="dt">Fri 27 Nov · Croma deals under ₹999</div>
+          <div class="pl"><span class="live">LIVE</span> Earbuds <b>₹899</b><span class="tick"><svg class="ic"><use href="assets/icons/sprite.svg#i-down"/></svg>₹100</span></div>
+        </div>
+        <div class="cd"><div class="n">37</div><div class="u">days</div></div>
+      </a>
+
+      <a class="mom" data-toast="Prototype: the Diwali plan is the demo Moment">
+        <span class="ic2" style="background:linear-gradient(150deg,#3BB273,#16784A)"><svg class="ic"><use href="assets/icons/sprite.svg#i-tree"/></svg></span>
+        <div class="mid">
+          <div class="nm">Christmas long weekend</div>
+          <div class="dt">Fri 25 – Sun 27 Dec · Goa</div>
+          <div class="pl"><span class="live">LIVE</span> Ginger room <b>₹2,150</b>/night<span class="tick" style="color:var(--red);background:var(--red-l)"><svg class="ic" style="animation:none"><use href="assets/icons/sprite.svg#i-up"/></svg>₹90</span></div>
+        </div>
+        <div class="cd"><div class="n">65</div><div class="u">days</div></div>
+      </a>
+
+      <a class="mom" data-toast="Prototype: the Diwali plan is the demo Moment">
+        <span class="ic2" style="background:linear-gradient(150deg,#4F7BFF,#2747C9)"><svg class="ic"><use href="assets/icons/sprite.svg#i-trophy"/></svg></span>
+        <div class="mid">
+          <div class="nm">IPL final watch party</div>
+          <div class="dt">Late May 2027 (date TBC) · Croma</div>
+          <div class="pl">Soundbar <b>₹2,999</b><span class="chip p">Price alert on</span></div>
+        </div>
+        <div class="cd"><div class="n">7</div><div class="u">months</div></div>
+      </a>
+
+      <!-- revealed by the college-calendar toggle -->
+      <a class="mom extra college" data-toast="Prototype: the Diwali plan is the demo Moment">
+        <span class="ic2" style="background:linear-gradient(150deg,#FFB23F,#E07B00)"><svg class="ic"><use href="assets/icons/sprite.svg#i-book"/></svg></span>
+        <div class="mid">
+          <div class="nm">End-sem exams</div>
+          <div class="dt">Mon 30 Nov · from your college preset</div>
+          <div class="pl">Exam kit: BigBasket + 1mg <b>₹499</b></div>
+        </div>
+        <div class="cd"><div class="n">40</div><div class="u">days</div></div>
+      </a>
+      <a class="mom extra college" data-toast="Prototype: the Diwali plan is the demo Moment">
+        <span class="ic2" style="background:linear-gradient(150deg,#C16BFF,#8800EC)"><svg class="ic"><use href="assets/icons/sprite.svg#i-music"/></svg></span>
+        <div class="mid">
+          <div class="nm">College fest</div>
+          <div class="dt">Fri 15 Jan · from your college preset</div>
+          <div class="pl">Westside fest look <b>₹1,499</b></div>
+        </div>
+        <div class="cd"><div class="n">86</div><div class="u">days</div></div>
+      </a>
+      <a class="mom extra payday" data-toast="Payday is optional and only used to time reminders">
+        <span class="ic2" style="background:linear-gradient(150deg,#5BC0BE,#2A8C8A)"><svg class="ic"><use href="assets/icons/sprite.svg#i-wallet"/></svg></span>
+        <div class="mid">
+          <div class="nm">Payday / pocket money</div>
+          <div class="dt">1st of every month · reminder only</div>
+          <div class="pl">Nudge: lock your Diwali fare</div>
+        </div>
+        <div class="cd"><div class="n">11</div><div class="u">days</div></div>
+      </a>
+    </div>
+
+    <div class="toggles jm-host">
+      <span class="jm"><b class="k-invest">Investment</b>Opt-in personal dates</span>
+      <div class="trow" role="switch" aria-checked="false" data-act="toggle" data-target=".college" data-on-msg="College preset added: exams + fest">
+        <div class="tx">Add my college calendar<div class="s">Exams, fest · from a campus preset</div></div><span class="sw"></span>
+      </div>
+      <div class="trow" role="switch" aria-checked="false" data-act="toggle" data-target=".payday" data-on-msg="Payday reminder added (optional)">
+        <div class="tx">Add payday <span class="s">(optional)</span><div class="s">Reminder timing only. No bank data read</div></div><span class="sw"></span>
+      </div>
+    </div>
+    <div style="height:24px"></div>
+  </div>
+</section>

@@ -1,0 +1,64 @@
+<section class="scr" data-screen="recap" data-sb="light" data-time="8:00">
+  <template class="notes">
+    <div class="nrow"><b class="k k-trigger">Trigger</b><span>Sunday 8pm recap push: the week's spend, streak and unlock status. An external trigger that turns into an internal one ("did I keep my streak?"). <i>Solves: Missing hook.</i></span></div>
+    <div class="nrow"><b class="k k-reward">Variable reward</b><span>The fare moved ↓₹180 this week, so there's news in the recap each time.</span></div>
+    <div class="nrow"><b class="k k-guard">Guardrail</b><span>One recap a week; push opt-outs tracked so they don't rise above baseline.</span></div>
+  </template>
+
+  <div class="lock">
+    <div class="clock">
+      <div class="d">Sunday, 25 October</div>
+      <div class="tm">8:00</div>
+    </div>
+
+    <div class="jm-banner" style="margin-top:14px"><b class="k k-trigger">Trigger</b>Sunday 8pm recap: one push a week, with real news in it. <span class="pr">Missing hook</span></div>
+
+    <div class="notif jm-host" data-act="recap-open" role="button" aria-label="Open weekly recap">
+      <span class="jm"><b class="k-trigger">Trigger</b>Missing hook</span>
+      <div class="hd"><span class="appic">neu</span>Tata Neu · Squad Goals<time>now</time></div>
+      <div class="t1">Your week on Neu 🔥</div>
+      <div class="t2">₹1,840 spent · streak 3 weeks · Diwali fare ↓₹180 · 55% unlocked</div>
+    </div>
+    <div class="notif n2" data-act="recap-open">
+      <div class="hd"><span class="appic">neu</span>Tata Neu · Squad<time>2h</time></div>
+      <div class="t1">Riya joined Diwali in Pune: +5% unlocked</div>
+    </div>
+
+    <div class="lockfoot">
+      <span class="cb"><svg class="ic"><use href="assets/icons/sprite.svg#i-flash"/></svg></span>
+      <span class="hint">Tap the notification</span>
+      <span class="cb"><svg class="ic"><use href="assets/icons/sprite.svg#i-camera"/></svg></span>
+    </div>
+
+    <div class="sheet">
+      <div class="grab" data-act="recap-close"></div>
+      <div class="rc-h">
+        <div><div class="t1">Your week</div><div class="t2">Mon 19 – Sun 25 Oct</div></div>
+        <span class="iconbtn" data-act="recap-close" aria-label="Close"><svg class="ic"><use href="assets/icons/sprite.svg#i-x"/></svg></span>
+      </div>
+      <div class="rgrid">
+        <div class="rbox">
+          <div class="k">Spent with Neu UPI</div>
+          <div class="v" data-count="1840" data-inr data-delay="500">₹1,840</div>
+          <div class="minibars"><i style="--h:40%;--d:.5s"></i><i style="--h:65%;--d:.55s"></i><i style="--h:30%;--d:.6s"></i><i style="--h:85%;--d:.65s" class="hi"></i><i style="--h:50%;--d:.7s"></i><i style="--h:70%;--d:.75s"></i><i style="--h:45%;--d:.8s"></i></div>
+        </div>
+        <div class="rbox np">
+          <div class="k">Streak</div>
+          <div class="v"><svg class="fl" viewBox="0 0 24 28"><use href="assets/icons/sprite.svg#i-flame"/></svg>3 weeks</div>
+          <div class="s">9 payments · 5/5 kept</div>
+        </div>
+        <div class="rbox">
+          <div class="k">Diwali fare</div>
+          <div class="v">₹3,240 <span class="tick in"><svg class="ic"><use href="assets/icons/sprite.svg#i-down"/></svg><span class="n">₹180</span></span></div>
+          <div class="s">Lowest in 7 days</div>
+        </div>
+        <div class="rbox np">
+          <div class="k">Unlocked</div>
+          <div class="v" data-count="55" data-suffix="%" data-delay="600">55%</div>
+          <div class="s">5% off live · +5 NeuCoins</div>
+        </div>
+      </div>
+      <a class="pill pri block" style="margin-top:14px" hx-get="screens/moment_detail.html">Open Diwali plan</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,69 @@
+<section class="scr" data-screen="squad" data-sb="dark" data-time="1:18">
+  <template class="notes">
+    <div class="nrow"><b class="k k-trigger">Trigger</b><span>Friends joining, paying or opening the link sends you a ping. Other people's actions bring you back. <i>Solves: Missing hook.</i></span></div>
+    <div class="nrow"><b class="k k-action">Action</b><span>The WhatsApp link works for friends who aren't on Neu yet (Kabir, shown as a "ghost"). <i>Solves: Standalone preference.</i></span></div>
+    <div class="nrow"><b class="k k-invest">Investment</b><span>Friends joined = +10% on the ladder. The squad becomes a social graph that's hard to leave.</span></div>
+    <div class="nrow"><b class="k k-guard">Guardrail</b><span>A ledger only: each person pays their <b>own</b> share by UPI. No pooled wallet, so no PPI licence is needed.</span></div>
+  </template>
+
+  <div class="scr-body">
+    <div class="topbar">
+      <a class="iconbtn" hx-get="screens/moment_detail.html" data-dir="back" aria-label="Back"><svg class="ic"><use href="assets/icons/sprite.svg#i-back"/></svg></a>
+      <div><div class="t">Squad</div><div class="st">Diwali long weekend · Delhi → Pune</div></div>
+    </div>
+
+    <div class="jm-banner"><b class="k k-trigger">Trigger</b>Friend activity brings you back, and each join cuts the price for everyone. <span class="pr">Missing hook</span></div>
+
+    <div class="sqhero jm-host">
+      <span class="jm"><b class="k-invest">Investment</b>Friends speed up the ladder</span>
+      <div class="t1">Diwali in Pune 🪔</div>
+      <div class="t2">Help cut the price: every friend who joins unlocks more</div>
+      <div class="faces">
+        <span class="av a">A</span><span class="av r">R</span><span class="av ghost">K</span><span class="av m pend">M</span>
+      </div>
+      <div class="boost">
+        <svg class="ring-s" viewBox="0 0 36 36"><circle cx="18" cy="18" r="15" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="4"/><circle class="fg" data-p="55" cx="18" cy="18" r="15" fill="none" stroke="#FFD66B" stroke-width="4" stroke-linecap="round" stroke-dasharray="283" stroke-dashoffset="283" pathLength="283" transform="rotate(-90 18 18)" style="transition:stroke-dashoffset 1.4s cubic-bezier(.2,.8,.2,1)"/></svg>
+        <div>Friends joined: <b data-count="10" data-from="0" data-suffix="%" data-delay="500">+10%</b> unlocked<br><span style="opacity:.8;font-size:11.5px">Plan now 55% unlocked · 5% off live</span></div>
+      </div>
+    </div>
+
+    <div class="sec-t"><h3>Members</h3><span>4 invited</span></div>
+    <div class="mem">
+      <div class="mrow2"><span class="av a">A</span><div class="mid"><div class="nm">Aarav (you)</div><div class="s">On Neu · 🔥 3-week streak</div></div><span class="chip p">Host</span></div>
+      <div class="mrow2"><span class="av r">R</span><div class="mid"><div class="nm">Riya</div><div class="s">Joined on Neu · 2h ago</div></div><span class="chip g">+5%</span></div>
+      <div class="mrow2 jm-host"><span class="jm"><b class="k-action">Action</b>Standalone preference</span><span class="av ghost">K</span><div class="mid"><div class="nm">Kabir</div><div class="s">Joined via WhatsApp · not on Neu yet</div></div><span class="chip ghost">Ghost</span></div>
+      <div class="mrow2"><span class="av m pend">M</span><div class="mid"><div class="nm">Meera</div><div class="s">Invited · hasn't opened yet</div></div><button class="pill sm sec" data-act="nudge">Nudge</button></div>
+    </div>
+
+    <div class="sec-t"><h3>Everyone pays their own share</h3></div>
+    <div class="mem jm-host">
+      <span class="jm"><b class="k-guard">Guardrail</b>Ledger only</span>
+      <div class="mrow2"><span class="av a">A</span><div class="mid"><div class="nm">Your share</div><div class="s">Flight + half a Ginger room · 5% off</div></div>
+        <div class="amt">₹4,788<span><s>₹5,040</s></span></div></div>
+      <div class="mrow2" style="padding-top:0;border-top:0"><button class="pill pri block sm" style="height:40px" data-toast="Opens Neu UPI for ₹4,788 (prototype, no real payment)"><svg class="ic" style="width:16px;height:16px"><use href="assets/icons/sprite.svg#i-upi"/></svg>Pay my share with Neu UPI</button></div>
+      <div class="mrow2"><span class="av r">R</span><div class="mid"><div class="nm">Riya</div><div class="s">Pays on Neu UPI</div></div><div class="amt">₹4,788</div></div>
+      <div class="mrow2"><span class="av ghost">K</span><div class="mid"><div class="nm">Kabir</div><div class="s">Can pay from any UPI app</div></div><div class="amt">₹4,788</div></div>
+      <div class="mrow2"><span class="av m pend">M</span><div class="mid"><div class="nm">Meera</div><div class="s">Share shown once she joins</div></div><div class="amt" style="color:var(--muted)">—</div></div>
+    </div>
+    <div class="ledger-note"><svg class="ic"><use href="assets/icons/sprite.svg#i-info"/></svg><span><b>Ledger only.</b> No pooled wallet: Neu never holds anyone's money. Each person books and pays for their own seat.</span></div>
+
+    <div class="actions">
+      <button class="pill wa block" data-toast="Opens the WhatsApp share sheet with your invite link (prototype)"><svg class="ic" style="width:19px;height:19px"><use href="assets/icons/sprite.svg#i-chat"/></svg>Share via WhatsApp</button>
+      <button class="pill sec block" data-toast="Invite link copied (prototype)"><svg class="ic" style="width:18px;height:18px"><use href="assets/icons/sprite.svg#i-link"/></svg>Copy invite link</button>
+    </div>
+
+    <a class="drop-teaser" hx-get="screens/drop.html" style="margin-top:0">
+      <span class="gi"><svg class="ic"><use href="assets/icons/sprite.svg#i-gift"/></svg></span>
+      <div><div class="t1">Squad Drop · this Friday 6pm</div><div class="t2">All 4 of you get a free reveal</div></div>
+      <svg class="ic"><use href="assets/icons/sprite.svg#i-chev"/></svg>
+    </a>
+
+    <div class="sec-t"><h3>Activity</h3></div>
+    <ul class="feed">
+      <li><span class="av r">R</span>Riya joined: plan +5%<time>2h</time></li>
+      <li><span class="av ghost">K</span>Kabir opened your WhatsApp link: +5%<time>5h</time></li>
+      <li><span class="av a">A</span>You kept a 3-week streak<time>Sun</time></li>
+    </ul>
+    <div style="height:20px"></div>
+  </div>
+</section>

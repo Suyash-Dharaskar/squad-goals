@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Squad Goals Prototype</title>
+<meta name="description" content="Concept prototype of 'Squad Goals' on Tata Neu for the IIM Raipur case competition. Not affiliated with Tata Digital.">
+<meta name="theme-color" content="#5132AD">
+<meta name="htmx-config" content='{"historyEnabled":false,"defaultSwapStyle":"innerHTML","globalViewTransitions":false}'>
+<link rel="preload" href="assets/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%238800EC'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='12' fill='white' text-anchor='middle'%3Eneu%3C/text%3E%3C/svg%3E">
+<script src="assets/js/htmx.min.js"></script>
+</head>
+<body hx-target="#screen" hx-swap="innerHTML transition:true">
+<div class="stage">
+
+  <!-- ============ Desktop side panel ============ -->
+  <aside class="panel" aria-label="Prototype controls">
+    <div class="brand">
+      <span class="appic">neu</span>
+      <div>
+        <h1>Squad Goals</h1>
+        <div class="sub">Concept prototype · Tata Neu Gen Z retention</div>
+      </div>
+    </div>
+    <p class="pitch">“Pay anywhere with Neu, keep your weekly streak, and watch your next trip or festival plan get cheaper, with your squad.”</p>
+
+    <div class="jt" role="switch" aria-checked="false" tabindex="0" data-act="judge">
+      <div><div class="t1">Judge mode</div><div class="t2">Overlay hook stage + case problem on each screen</div></div>
+      <span class="sw js-judge-sw"></span>
+    </div>
+
+    <h4>Screens</h4>
+    <ul class="slist js-slist">
+      <li><a hx-get="screens/home.html" data-s="home"><span class="n">1</span>Home + Squad Goals module</a></li>
+      <li><a hx-get="screens/pay_success.html" data-s="pay_success"><span class="n">2</span>Scan &amp; Pay success</a></li>
+      <li><a hx-get="screens/moments.html" data-s="moments"><span class="n">3</span>Your Moments</a></li>
+      <li><a hx-get="screens/moment_detail.html" data-s="moment_detail"><span class="n">4</span>Moment: Diwali plan + ladder</a></li>
+      <li><a hx-get="screens/squad.html" data-s="squad"><span class="n">5</span>Squad (own-share split)</a></li>
+      <li><a hx-get="screens/drop.html" data-s="drop"><span class="n">6</span>Friday 6pm Squad Drop</a></li>
+      <li><a hx-get="screens/recap.html" data-s="recap"><span class="n">7</span>Sunday recap push</a></li>
+      <li><a hx-get="screens/unlock.html" data-s="unlock"><span class="n">8</span>100% unlocked → checkout</a></li>
+      <li><a hx-get="screens/widget.html" data-s="widget"><span class="n">9</span>Home-screen widget</a></li>
+    </ul>
+
+    <h4>On this screen</h4>
+    <div class="notes js-notes">—</div>
+
+    <h4>Hook stages</h4>
+    <div class="klegend">
+      <span class="k-trigger">Trigger</span><span class="k-action">Action</span><span class="k-reward">Variable reward</span><span class="k-invest">Investment</span><span class="k-guard">Guardrail</span>
+    </div>
+    <p class="pfoot">Concept prototype for IIM Raipur case competition — not affiliated with Tata Digital. All names, prices and users are fictional. No real login, payment or personal data.</p>
+  </aside>
+
+  <!-- ============ Phone ============ -->
+  <div class="device js-device">
+    <span class="island" aria-hidden="true"></span>
+    <div class="phone" id="phone" data-sb="dark">
+      <div class="sb" aria-hidden="true">
+        <span class="js-time">1:12</span>
+        <span class="r">
+          <svg class="ic"><use href="assets/icons/sprite.svg#i-signal"/></svg>
+          <svg class="ic"><use href="assets/icons/sprite.svg#i-wifi"/></svg>
+          <svg class="ic bat" viewBox="0 0 28 24"><use href="assets/icons/sprite.svg#i-battery"/></svg>
+        </span>
+      </div>
+
+      <main id="screen" aria-live="polite"></main>
+
+      <div class="disc"><span>Concept prototype for IIM Raipur case competition —</span><b>not affiliated with Tata Digital</b></div>
+      <div class="toast js-toast" role="status"></div>
+
+      <!-- mobile: floating Judge button + screen menu -->
+      <button class="jfab js-jfab" data-act="jmenu" aria-label="Judge mode and screens">JM</button>
+      <div class="jmenu js-jmenu">
+        <div class="row" data-act="judge">Judge mode <span class="sw js-judge-sw"></span></div>
+        <ol class="js-mlist">
+          <li><a hx-get="screens/home.html" data-s="home"><span>1</span>Home + Squad Goals</a></li>
+          <li><a hx-get="screens/pay_success.html" data-s="pay_success"><span>2</span>Scan &amp; Pay success</a></li>
+          <li><a hx-get="screens/moments.html" data-s="moments"><span>3</span>Your Moments</a></li>
+          <li><a hx-get="screens/moment_detail.html" data-s="moment_detail"><span>4</span>Diwali plan + ladder</a></li>
+          <li><a hx-get="screens/squad.html" data-s="squad"><span>5</span>Squad</a></li>
+          <li><a hx-get="screens/drop.html" data-s="drop"><span>6</span>Squad Drop</a></li>
+          <li><a hx-get="screens/recap.html" data-s="recap"><span>7</span>Sunday recap</a></li>
+          <li><a hx-get="screens/unlock.html" data-s="unlock"><span>8</span>100% unlocked</a></li>
+          <li><a hx-get="screens/widget.html" data-s="widget"><span>9</span>Widget</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

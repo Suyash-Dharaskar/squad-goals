@@ -1,0 +1,120 @@
+<section class="scr" data-screen="home" data-sb="light" data-time="1:12">
+  <template class="notes">
+    <div class="nrow"><b class="k k-invest">Investment</b><span>Streak, next Moment and unlocked % now sit on Home, under quick actions. Today rewards are 3 taps deep. <i>Solves: Missing hook.</i></span></div>
+    <div class="nrow"><b class="k k-trigger">Trigger</b><span>The Diwali card's live fare (↓₹180) gives a reason to open between big purchases. <i>Solves: Event-based usage.</i></span></div>
+    <div class="nrow"><b class="k k-action">Action</b><span>Any ₹10+ merchant UPI payment counts, so the habit rides payments students already make elsewhere. <i>Solves: Standalone preference.</i></span></div>
+    <div class="nrow"><b class="k k-guard">Unchanged</b><span>Categories, Offers, NeuCard and checkout stay the same. No new tabs.</span></div>
+  </template>
+
+  <div class="scr-body">
+    <!-- Purple hero (current Tata Neu look) -->
+    <div class="hero">
+      <div class="searchrow">
+        <div class="search" data-toast="Search — unchanged in this concept"><svg class="ic"><use href="assets/icons/sprite.svg#i-search"/></svg>Search</div>
+        <div class="avatar-btn" data-toast="Profile — unchanged in this concept"><svg class="ic"><use href="assets/icons/sprite.svg#i-user"/></svg></div>
+      </div>
+      <div class="hero-ban">
+        <div class="art" aria-hidden="true">
+          <div class="five">5</div>
+          <div class="coin3d c3">N</div>
+          <div class="coin3d c1">N</div>
+          <div class="coin3d c2">N</div>
+        </div>
+        <div class="copy jm-host">
+          <span class="jm b l" style="bottom:-20px"><b class="k-action">Action</b>Standalone preference</span>
+          <div class="h1">NeuCoins every<br><b>streak week</b></div>
+          <div class="cta-out" hx-get="screens/pay_success.html">Pay with UPI <svg class="ic"><use href="assets/icons/sprite.svg#i-upi"/></svg></div>
+        </div>
+      </div>
+      <div class="hero-foot">on any merchant UPI payment ₹10+ · 5 payments a week keeps your streak</div>
+    </div>
+
+    <!-- Quick actions + new Squad action -->
+    <div class="qa">
+      <a data-toast="Send Money — P2P earns no streak credit (merchant payments only)"><span class="ib"><svg class="ic"><use href="assets/icons/sprite.svg#i-send"/></svg></span>Send Money</a>
+      <a data-toast="Recharges — unchanged in this concept"><span class="ib"><svg class="ic"><use href="assets/icons/sprite.svg#i-phone"/></svg></span>Recharges</a>
+      <a data-toast="Pay Bills — counts toward your streak"><span class="ib"><svg class="ic"><use href="assets/icons/sprite.svg#i-bill"/></svg></span>Pay Bills</a>
+      <a hx-get="screens/pay_success.html"><span class="ib"><svg class="ic"><use href="assets/icons/sprite.svg#i-upi"/></svg></span>Tata Neu UPI</a>
+      <a hx-get="screens/squad.html"><span class="badge pp">New</span><span class="ib sq"><svg class="ic"><use href="assets/icons/sprite.svg#i-squad"/></svg></span>Squad</a>
+    </div>
+
+    <div class="jm-banner"><b class="k k-invest">Investment</b>Progress is visible on Home for the first time: streak, next Moment, unlocked %. <span class="pr">Missing hook</span></div>
+
+    <!-- NEW: Squad Goals module (NeuPass tile style) -->
+    <div class="sg">
+      <div class="sg-head">
+        <span class="lbl">Squad Goals</span>
+        <a class="more" hx-get="screens/moments.html">Your Moments <svg class="ic"><use href="assets/icons/sprite.svg#i-chev"/></svg></a>
+      </div>
+
+      <div class="streak jm-host" hx-get="screens/pay_success.html">
+        <span class="jm"><b class="k-invest">Investment</b>Missing hook</span>
+        <span class="flamebox"><svg viewBox="0 0 24 28"><use href="assets/icons/sprite.svg#i-flame"/></svg></span>
+        <div>
+          <div class="t1">Week 3 streak</div>
+          <div class="t2">4/5 payments this week</div>
+        </div>
+        <div class="dots" aria-label="4 of 5 payments"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+      </div>
+
+      <a class="mcard jm-host" hx-get="screens/moment_detail.html">
+        <span class="jm"><b class="k-trigger">Trigger</b>Event-based usage</span>
+        <div class="mrow">
+          <span class="mic"><svg class="ic"><use href="assets/icons/sprite.svg#i-lamp"/></svg></span>
+          <div style="flex:1;min-width:0">
+            <div class="k">Diwali long weekend · <b>in 18 days</b></div>
+            <div class="ttl">Delhi → Pune</div>
+            <div class="price"><span>Air India Express</span><span class="amt" data-count="3240" data-from="3420" data-inr data-delay="500" data-dur="1200">₹3,240</span><span class="tick in"><svg class="ic"><use href="assets/icons/sprite.svg#i-down"/></svg><span class="n">₹180</span></span></div>
+          </div>
+          <svg class="ic" style="width:18px;height:18px;color:#A3A1AD"><use href="assets/icons/sprite.svg#i-chev"/></svg>
+        </div>
+        <div class="mladder">
+          <div class="bar"><div class="fill" data-w="55"></div>
+            <div class="stops"><i class="on" style="left:25%"></i><i class="on" style="left:50%"></i><i style="left:75%"></i><i style="left:calc(100% - 6px)"></i></div>
+          </div>
+          <div class="legend"><span><b>55% unlocked</b> · 5% off live</span><span>Next: 10% off at 75%</span></div>
+        </div>
+      </a>
+    </div>
+
+    <a class="drop-teaser" hx-get="screens/drop.html">
+      <span class="gi"><svg class="ic"><use href="assets/icons/sprite.svg#i-gift"/></svg></span>
+      <div><div class="t1">Squad Drop · Friday 6pm</div><div class="t2">Free entry · guaranteed reward</div></div>
+      <svg class="ic"><use href="assets/icons/sprite.svg#i-chev"/></svg>
+    </a>
+
+    <!-- Existing tiles (unchanged) -->
+    <div class="grid2" style="margin-top:12px">
+      <div class="gt np" data-toast="NeuPass — unchanged in this concept">
+        <span class="lbl">NeuPass</span>
+        <div class="h">120 NeuCoins</div>
+        <div class="s">Balance now visible on Home</div>
+        <div class="blob" style="background:radial-gradient(circle at 35% 30%,#FF9AD0,#C2188F)"></div>
+      </div>
+      <div class="gt tile" data-toast="Cards — unchanged in this concept">
+        <span class="lbl">Cards</span>
+        <div class="h">Earn up to 10% with NeuCard</div>
+        <div class="blob" style="background:linear-gradient(150deg,#7B5BFF,#3A1C8C);border-radius:14px;width:70px;height:92px;right:14px;bottom:-20px;transform:rotate(10deg)"></div>
+      </div>
+      <div class="gt tile" data-toast="Electronics — unchanged in this concept">
+        <span class="lbl">Electronics</span>
+        <div class="h">Mobiles, TVs &amp; more</div>
+        <div class="s">3 hour delivery</div>
+      </div>
+      <div class="gt tile" data-toast="Hotels — unchanged in this concept">
+        <span class="lbl">Hotels</span>
+        <div class="h">Stays for every budget</div>
+        <div class="s">Ginger and more</div>
+      </div>
+    </div>
+    <div class="footnote">Enjoy Shopping,<br>Travel, Finance and more</div>
+  </div>
+
+  <nav class="bnav">
+    <a class="on" hx-get="screens/home.html"><svg class="ic"><use href="assets/icons/sprite.svg#i-home"/></svg>Home</a>
+    <a data-toast="Categories — unchanged in this concept"><svg class="ic"><use href="assets/icons/sprite.svg#i-cats"/></svg>Categories</a>
+    <a class="scan" hx-get="screens/pay_success.html"><span class="disk"><svg class="ic"><use href="assets/icons/sprite.svg#i-scan"/></svg></span>Scan &amp; Pay</a>
+    <a data-toast="Offers — unchanged in this concept"><svg class="ic"><use href="assets/icons/sprite.svg#i-tag"/></svg>Offers</a>
+    <a data-toast="NeuCard — unchanged in this concept"><svg class="ic"><use href="assets/icons/sprite.svg#i-card"/></svg>NeuCard</a>
+  </nav>
+</section>
