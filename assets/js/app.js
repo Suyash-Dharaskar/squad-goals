@@ -30,7 +30,7 @@
 
   /* ---------------- Judge mode ---------------- */
   var judge = true; /* ON by default for judges; user can switch off (remembered) */
-  try { var js = localStorage.getItem("sg-judge"); if (js !== null) judge = js === "1"; } catch (e) {}
+  try { var js = localStorage.getItem("sg-judge-v2"); if (js !== null) judge = js === "1"; } catch (e) {}
   if (params.has("judge")) judge = params.get("judge") === "1";
   function setJudge(on, save) {
     judge = !!on;
@@ -38,7 +38,7 @@
     $$(".js-judge-sw").forEach(function (s) { s.classList.toggle("on", judge); });
     $$("[data-act=judge][role=switch]").forEach(function (s) { s.setAttribute("aria-checked", judge); });
     var fab = $(".js-jfab"); if (fab) fab.classList.toggle("on", judge);
-    if (save) { try { localStorage.setItem("sg-judge", judge ? "1" : "0"); } catch (e) {} }
+    if (save) { try { localStorage.setItem("sg-judge-v2", judge ? "1" : "0"); } catch (e) {} }
   }
   setJudge(judge, false);
 
